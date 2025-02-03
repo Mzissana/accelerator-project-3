@@ -1,0 +1,100 @@
+.faq-accordion__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 23px;
+
+  @media (min-width: $desktop-width) {
+    grid-area: accordion;
+  }
+}
+
+.faq-accordion__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  padding: 24px 17px;
+  border: 2px solid $background-accent;
+  border-radius: 16px;
+}
+
+.faq-accordion__item div {
+  padding: 0;
+}
+
+.faq-accordion__item button {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  padding: 0 52px 0 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  color: inherit;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url("__spritemap#sprite-plus-icon-view");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-color: $background-accent;
+    background-position: 5px 5px;
+    right: 0;
+    top: 50%;
+    translate: 0 -50%;
+  }
+}
+
+.faq-accordion__item span {
+  white-space: nowrap;
+}
+
+.faq-accordion__item div:first-child {
+  cursor: pointer;
+}
+
+.faq-accordion__item div:nth-child(2) {
+  display: none;
+}
+
+.faq-accordion__item--show div:nth-child(2) {
+  display: block;
+}
+
+.faq-accordion__item--show {
+  background-color: $background-accent;
+  color: $on-dark-text-color;
+  &:last-of-type {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+  }
+}
+
+.faq-accordion button {
+  background-color: transparent;
+  border: none;
+}
+
+.faq-accordion__item--show button {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url("__spritemap#sprite-minus-icon-view");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+  }
+}

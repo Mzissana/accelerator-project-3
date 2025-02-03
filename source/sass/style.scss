@@ -2,3 +2,49 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+
+
+// common
+@import "./common/variables.scss";
+@import "./common/states.scss";
+@import "./common/mixins.scss";
+@import "./common/fonts.scss";
+@import "./common/global.scss";
+@import "./common/visually-hidden.scss";
+
+// page
+@import "./blocks/page-body.scss";
+
+
+//main
+@import "./blocks/main.scss";
+
+//about
+@import "./blocks/about.scss";
+@import "./blocks/about-info.scss";
+@import "./blocks/about-goal.scss";
+@import "./blocks/about-features.scss";
+
+//programs
+@import "./blocks/programs.scss";
+@import "./blocks/programs-swiper.scss";
+@import "./blocks/programs-slide.scss";
+
+//grant
+@import "./blocks/grant.scss";
+@import "./blocks/grant-requirements.scss";
+
+
+//faq
+@import "./blocks/faq.scss";
+@import "./blocks/faq-accordion.scss";
+
+
+// contacts
+@import "./blocks/contacts.scss";
+@import "./blocks/contact.scss";
+
+// footer
+@import "./blocks/footer.scss";
+@import "./blocks/footer-links.scss";
+@import "./blocks/socials.scss";

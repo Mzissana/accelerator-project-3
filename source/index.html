@@ -1,31 +1,454 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Internship</title>
-    <link rel="stylesheet" href="sass/style.scss">
+    <link rel="stylesheet" href="sass/style.scss" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="favicons/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg" />
+    <link rel="shortcut icon" href="favicons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicons/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="favicons/site.webmanifest" />
   </head>
 
   <body class="page-body">
+    <main>
+
+      <section
+      class="main__about about"
+      data-test="about"
+      id="about"
+    >
+      <div class="about__wrapper">
+        <div class="about__info about-info">
+          <h2 class="about-info__header">О проекте «Стажировка»</h2>
+
+          <p>
+            «Стажировка» — совместный проект
+правительств и волонтёрских бригад.
+          </p>
+        </div>
+
+        <div class="about__goal about-goal">
+          <h3>Наша цель</h3>
+
+          <p>
+            Наша деятельность направлена
+на повышение квалификации молодых
+специалистов на ранних и средних
+стадиях карьеры, предоставляя
+им инструменты для решения сложных
+проблем, с которыми сталкиваются в мире.
+Цель центра — наделить этих людей
+способностью инициировать значимые
+изменения.
+          </p>
+          <button class="about-goal__button">Подробнее о проекте</button>
+        </div>
+
+        <div class="about__features about-features">
+          <ul class="about-features__list list-reset">
+            <li class="about-features__item">
+              <h3>Более 250 программ</h3>
+              <p>учебных и рабочих, разной
+                длительностью от 3 месяцев
+                до 1 года
+              </p>
+            </li>
+            <li class="about-features__item">
+              <h3>Более 3000 участников</h3>
+              <p>уже успешно прошли программу от «Стажировка» и остались в разных странах
+              </p>
+            </li>
+            <li class="about-features__item">
+              <h3>участники из 60 стран</h3>
+              <p>студенты со всего мира приезжают на программу
+                «Стажировки» от 3 месяцев до 1 года
+              </p>
+            </li>
+            <li class="about-features__item">
+              <h3>от 4 200 $
+                до 8 400 $</h3>
+              <p>грант всем участникам
+                для комфортного прохождения
+                программы
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="main__programs programs" id="programs" data-test="programs">
+      <div class="programs__wrapper programs-swiper-container">
+        <div class=" main-heading__wrapper">
+        <h2 class="programs__header main-heading">Программы</h2>
+        </div>
+        <div class="programs-swiper-container__buttons">
+          <div
+            class="programs-swiper-container__button programs-swiper-container__button--prev swiper-button-prev"
+          ></div>
+          <div
+            class="programs-swiper-container__button programs-swiper-container__button--next swiper-button-next"
+          ></div>
+        </div>
+        <div class="programs__swiper programs-swiper">
+          <div class="swiper-wrapper programs-swiper__wrapper">
+            <div
+              class="swiper-slide programs-swiper__slide programs-slide programs-slide--elbrus"
+            >
+            <div class="programs-slide__wrapper">
+              <div class="programs-slide__info">
+
+              </div>
+            </div>
+
+
+          </div>
+          <button class="programs__button">Все программы</button>
+
+          </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section
+        class="main__grant grant"
+        data-test="grant"
+        id="grant"
+        data-test="grant"
+      >
+        <div class="grant__wrapper">
+          <div class="grant__info">
+            <h2 class="grant__header">Как поехать</h2>
+
+            <p>
+              Свяжитесь с координатором, чтобы узнать полную информацию.
+              Вы получите актуальные сведения о доступных программах и городах,
+              в которых можете пройти программу.
+            </p>
+          </div>
+
+          <picture>
+            <source
+              width="498"
+              height="363"
+              type="image/webp"
+              media="(min-width: 1440px)"
+              srcset="img/grant-desktop@1x.webp 1x, img/grant-desktop@2x.webp 2x"
+            />
+            <source
+              width="678"
+              height="375"
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="img/grant-tablet@1x.webp 1x, img/grant-tablet@2x.webp 2x"
+            />
+            <source
+              width="290"
+              height="200"
+              type="image/webp"
+              srcset="img/grant-mobile@1x.webp 1x, img/grant-mobile@2x.webp 2x"
+            />
+            <source
+              width="498"
+              height="363"
+              type="image/jpg"
+              media="(min-width: 1440px)"
+              srcset="img/grant-desktop@1x.jpg 1x, img/grant-desktop@2x.jpg 2x"
+            />
+            <source
+              width="678"
+              height="375"
+              type="image/jpg"
+              media="(min-width: 768px)"
+              srcset="img/grant-tablet@1x.jpg 1x, img/grant-tablet@2x.jpg 2x"
+            />
+            <img
+              class="grant__image"
+              src="img/grant-mobile@1x.jpg"
+              srcset="img/grant-mobile@2x.jpg 2x"
+              alt="Указатели на разных языках"
+              width="290"
+              height="200"
+            />
+          </picture>
+
+          <div class="grant__requirements grant-requirements">
+            <h3 class="grant-requirements__header">
+              Чтобы получить грант на обучение, вам нужно:
+            </h3>
+            <ul class="grant-requirements__list list-reset">
+              <li class="grant-requirements__item" data-number="1">
+                Быть в возрасте от 16 до 30 лет
+              </li>
+              <li class="grant-requirements__item" data-number="2">
+                Иметь оконченное среднее образование
+              </li>
+              <li class="grant-requirements__item" data-number="3">
+                Иметь документально подтверждённое отсутствие судимости и пройти
+                консульскую проверку
+              </li>
+              <li class="grant-requirements__item" data-number="4">
+                За последние 2 года быть не больше 3х месяцев подряд непрерывно
+                в одной стране
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="main__faq faq" data-test="FAQ">
+        <div class="faq__wrapper">
+          <h2 class="faq__header">Вопросы и ответы</h2>
+          <div class="faq-tabs__accordion faq-accordion">
+            <ul class="faq-accordion__list list-reset">
+              <li class="faq-accordion__item">
+                <button>
+                  Кто организатор? Какие сроки у программы?
+                </button>
+                <div>
+                  Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями. Сроки программы обмена могут варьироваться от одного семестра до года.
+                </div>
+              </li>
+
+              <li class="faq-accordion__item">
+                <button>
+                  Что такое грант на обучение?
+                </button>
+
+                <div>
+                  Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена студентами для оплаты учебных расходов.
+                </div>
+              </li>
+
+              <li class="faq-accordion__item  faq-accordion__item--show" >
+                <button>
+                  Как определяется стоимость программы?
+                </button>
+
+                <div>
+                  Полная стоимость определяется организаторами в зависимости
+от направления. В большинстве случаев грант «Стажировка» не покрывает
+полную стоимость программы, и поэтому предусматривается определённая
+доля личного участия.
+                </div>
+              </li>
+
+              <li class="faq-accordion__item">
+                <button>
+                  Признаётся ли учёба в рамках проекта
+для дальнейшего обучения?
+                </button>
+                <div>
+                  Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме того, многие университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.
+                </div>
+
+              </li>
+
+              <li class="faq-accordion__item">
+                <button>
+                  Как выглядит полный процесс регистрации
+на программу «Стажировка»?
+                </button>
+
+                <div>
+                  Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена, общение с координатором программы, заполнение заявления и предоставление необходимых документов, прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и подписание договора об участии в программе. Подробнее можно узнать позвонив в центр.
+
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <section
+        class="main__contacts contacts"
+        data-test="contacts"
+        id="contacts"
+      >
+        <div class="contacts__wrapper">
+          <h2 class="contacts__header">Контакты</h2>
+          <ul class="contacts__list list-reset">
+            <li class="contacts__item contact contacts__item--address">
+              <h3 class="contact__header">Центральный офис</h3>
+              <p class="contact__subtitle">
+                г. Новосибирск, ул. Щетинкина 68, культурный центр
+              </p>
+            </li>
+
+            <li class="contacts__item contact contacts__item--phone">
+              <h3 class="contact__header">Телефон</h3>
+              <a class="contact__subtitle link-reset" href="tel:+796387687676"
+                >+796387687676</a
+              >
+            </li>
+
+            <li class="contacts__item contact contacts__item--email">
+              <h3 class="contact__header">Email</h3>
+              <a
+                class="contact__subtitle link-reset"
+                href="mailto:info@stazh.ru"
+                >Info@stazh.ru</a
+              >
+            </li>
+          </ul>
+          <picture>
+            <source
+              width="1240"
+              height="486"
+              type="image/webp"
+              media="(min-width: 1440px)"
+              srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x"
+            />
+            <source
+              width="678"
+              height="500"
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x"
+            />
+            <source
+              width="290"
+              height="240"
+              type="image/webp"
+              srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x"
+            />
+            <source
+              width="1240"
+              height="486"
+              type="image/jpg"
+              media="(min-width: 1440px)"
+              srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x"
+            />
+            <source
+              width="678"
+              height="500"
+              type="image/jpg"
+              media="(min-width: 768px)"
+              srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x"
+            />
+            <img
+              class="contacts__map-image"
+              src="img/map-mobile@1x.jpg"
+              srcset="img/map-mobile@2x.jpg 2x"
+              alt="Расположение Проекта"
+              width="290"
+              height="240"
+            />
+          </picture>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" data-test="footer">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="footer__wrapper">
+        <div class="footer__logo">
+          <svg class="footer__logo-image" width="30" height="30">
+            <use href="/__spritemap#sprite-logo-icon"></use>
+          </svg>
+        </div>
+        <ul class="footer__links footer-links list-reset">
+          <li class="footer-links__item">
+            <a class="footer-links__link link-reset" href="#about">
+              О проекте
+            </a>
+          </li>
+          <li class="footer-links__item">
+            <a class="footer-links__link link-reset" href="#programs">
+              Программы
+            </a>
+          </li>
+          <li class="footer-links__item">
+            <a class="footer-links__link link-reset" href="#grant">
+              Как поехать
+            </a>
+          </li>
+          <li class="footer-links__item">
+            <a class="footer-links__link link-reset" href="#reviews">
+              Отзывы
+            </a>
+          </li>
+          <li class="footer-links__item">
+            <a class="footer-links__link link-reset" href="#news"> Новости </a>
+          </li>
+
+          <li class="footer-links__item">
+            <a class="footer-links__link link-reset" href="#contacts">
+              Контакты
+            </a>
+          </li>
+        </ul>
+
+        <div class="footer__confidentiality">
+          <a class="footer__confidentiality-link link-reset" href="#">
+            Политика конфиденциальности
+          </a>
+          <span>Стажировка © 2023 Все права защищены</span>
+        </div>
+
+        <div class="footer__socials socials">
+          <ul class="socials__list list-reset">
+            <li class="socials__item">
+              <a
+                class="socials__link socials__icon socials__icon--vkontakte link-reset"
+                href="https://vk.com/htmlacademy"
+                target="_blank"
+              >
+                <span class="visually-hidden">Vk</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a
+                class="socials__link socials__icon socials__icon--ok link-reset"
+                href="#"
+                target="_blank"
+              >
+                <span class="visually-hidden">Одноклассники</span>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a
+                class="socials__link socials__icon socials__icon--reddit link-reset"
+                href="#"
+                target="_blank"
+              >
+                <span class="visually-hidden">Github</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+
     <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
+    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт" />
     <svg>
       <use href="/__spritemap#sprite-user"></use>
     </svg>
     <!-- примеры требуемых атрибутов data-test="*" -->
     <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
-    <div data-test="grant">grant</div>
     <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
     <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
     <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
     <script type="module" src="js/main.js"></script>
   </body>
-
 </html>

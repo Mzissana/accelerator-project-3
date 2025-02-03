@@ -1,0 +1,13 @@
+.page-body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+  color: $main-text-color;
+  font-family: $content-font;
+  font-size: 12px;
+  font-weight: 400;
+  position: relative;
+  width: 100%;
+  background-color: $background-main;
+}

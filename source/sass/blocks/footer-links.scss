@@ -1,0 +1,25 @@
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    margin: 0 0 0 auto;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto 0 0;
+  }
+}

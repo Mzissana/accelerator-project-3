@@ -1,0 +1,61 @@
+.contact__header {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.contact__subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+
+.contact__subtitle:hover {
+  color: rgba(2, 102, 193, 0.102);
+  &::after {
+    background-color: rgba(2, 102, 193, 0.102);
+  }
+}
+
+
+.contact__subtitle:focus {
+  color: #0266c1;
+  &::after {
+    background-color: #0266c1;
+  }
+}
+
+.contact__subtitle:active {
+  color: #1c3374;
+  &::after {
+    background-color: #1c3374;
+  }
+}
+.contact__subtitle:active {
+  color: #999999;
+  &::after {
+    background-color: #999999;
+  }
+}

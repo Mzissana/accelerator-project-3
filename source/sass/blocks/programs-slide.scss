@@ -1,0 +1,139 @@
+.programs-slide {
+  padding: 30px 20px;
+  @media (min-width: $tablet-width) {
+    max-width: 330px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 380px;
+  }
+}
+
+.programs-slide__wrapper {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.programs-slide--elbrus {
+  background-image: image-set(
+    url("../../img/elbrus-card-mobile@1x.webp") 1x,
+    url("../../img/elbrus-card-mobile@2x.webp") 2x,
+    url("../../img/elbrus-card-mobile@1x.jpg") 1x,
+    url("../../img/elbrus-card-mobile@2x.jpg") 2x
+  );
+
+  @media (min-width: $tablet-width) {
+    background-image: image-set(
+    url("../../img/elbrus-card-tablet@1x.webp") 1x,
+    url("../../img/elbrus-card-tablet@2x.webp") 2x,
+    url("../../img/elbrus-card-tablet@1x.jpg") 1x,
+    url("../../img/elbrus-card-tablet@2x.jpg") 2x
+  );
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: image-set(
+    url("../../img/elbrus-card-desktop@1x.webp") 1x,
+    url("../../img/elbrus-card-desktop@2x.webp") 2x,
+    url("../../img/elbrus-card-desktop@1x.jpg") 1x,
+    url("../../img/elbrus-card-desktop@2x.jpg") 2x
+  );
+  }
+}
+
+
+
+.programs-slide--belukha {
+    background-image: image-set(
+    url("../../img/belukha-card-tablet@1x.webp") 1x,
+    url("../../img/belukha-card-tablet@2x.webp") 2x,
+    url("../../img/belukha-card-tablet@1x.jpg") 1x,
+    url("../../img/belukha-card-tablet@2x.jpg") 2x
+  );
+
+
+  @media (min-width: $desktop-width) {
+    background-image: image-set(
+    url("../../img/belukha-card-desktop@1x.webp") 1x,
+    url("../../img/belukha-card-desktop@2x.webp") 2x,
+    url("../../img/belukha-card-desktop@1x.jpg") 1x,
+    url("../../img/belukha-card-desktop@2x.jpg") 2x
+  );
+  }
+}
+
+
+
+.programs-slide--fisht {
+  background-image: image-set(
+    url("../../img/fisht-card-desktop@1x.webp") 1x,
+    url("../../img/fisht-card-desktop@2x.webp") 2x,
+    url("../../img/fisht-card-desktop@1x.jpg") 1x,
+    url("../../img/fisht-card-desktop@2x.jpg") 2x
+  );
+}
+
+
+
+.programs-slide--manaraga {
+  background-image: image-set(
+    url("../../img/manaraga-card-mobile@1x.webp") 1x,
+    url("../../img/manaraga-card-mobile@2x.webp") 2x,
+    url("../../img/manaraga-card-mobile@1x.jpg") 1x,
+    url("../../img/manaraga-card-mobile@2x.jpg") 2x
+  );
+
+}
+
+.programs-slide__info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: auto;
+  z-index: 10;
+  position: relative;
+}
+
+.programs-slide__header {
+  margin: 0 0 15px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 0.2;
+    height: 1px;
+    width: 80px;
+    background-size: 1px 80px;
+    bottom: -15px;
+    left: 0;
+  }
+
+
+  @media (min-width: $tablet-width) {
+    max-width: 260px;
+  }
+}
+
+.programs-slide__features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.programs-slide__feature {
+  margin: 0;
+}
+
+.programs-slide__extra-features {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-between;
+}
