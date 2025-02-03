@@ -49,6 +49,13 @@
   background-color: $icon-additional;
   mask-image: url("../../img/sprite/vk-icon.svg");
   mask-repeat: no-repeat;
+  mask-size: contain;
+
+  @media (min-width: $tablet-width) {
+    width: 16px;
+    height: 11px;
+  }
+
 }
 
 .socials__icon--ok {
@@ -59,6 +66,13 @@
   background-color: $icon-additional;
   mask-image: url("../../img/sprite/ok-icon.svg");
   mask-repeat: no-repeat;
+  mask-size: contain;
+
+  @media (min-width: $tablet-width) {
+    width: 11px;
+    height: 15px;
+  }
+
 }
 
 .socials__icon--reddit {
@@ -69,6 +83,13 @@
   background-color: $icon-additional;
   mask-image: url("../../img/sprite/reddit-icon.svg");
   mask-repeat: no-repeat;
+  mask-size: contain;
+
+  @media (min-width: $tablet-width) {
+    width: 17px;
+    height: 16px;
+  }
+
 }
 
 .socials__item:active .socials__icon {

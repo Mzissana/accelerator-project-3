@@ -27,9 +27,9 @@
     grid-template-areas: "logo menu socials"
     "confidentiality confidentiality confidentiality";
     grid-template-columns: 52px auto 150px;
-    padding: 60px 100px 40px;
+    padding: 60px 100px 42px;
     width: 1440px;
-    gap: 25px;
+    gap: 25px 52px;
     justify-content: initial;
   }
 }
@@ -62,6 +62,7 @@
   @media (min-width: $tablet-width) {
     width: auto;
     margin-left: auto;
+    align-items: center;
   }
 
   @media (min-width: $desktop-width) {
@@ -74,21 +75,28 @@
   display: flex;
   justify-content: center;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 14px;
   text-align: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 13px;
+
+
 
   @media (min-width: $tablet-width) {
     max-width: 250px;
     justify-content: flex-start;
+    line-height: 12px;
+    gap: 14px;
   }
 
   @media (min-width: $desktop-width) {
     grid-area: confidentiality;
     max-width: 100%;
     justify-content: space-between;
+    font-size: 14px;
+    line-height: 18px;
+    align-items: center;
   }
 }
 
@@ -105,7 +113,22 @@
 .footer__confidentiality-link {
   opacity: 1;
   color: $main-text-color;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-color: inherit;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 102%;
+    background-color: $main-text-color;
+    bottom: -3px;
+    left: -2px;
+
+    @media (min-width: $tablet-width) {
+      left: 0;
+      width: 100%;
+    }
+  }
+
+
 }

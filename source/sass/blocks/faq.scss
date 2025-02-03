@@ -20,29 +20,31 @@
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    padding: 60px 45px;
-    gap: 45px;
+    padding: 50px 45px;
+    gap: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1366px;
-    padding: 60px 206px;
+    width: 1440px;
+    padding: 71px 206px 60px;
+    gap: 71px;
   }
 }
 
 .faq__header {
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 20px;
+  line-height: 20px;
 
   @media (min-width: $tablet-width) {
-    font-size: 54px;
-    line-height: 54px;
+    font-size: 34px;
+    line-height: 50px;
   }
 
-  @media (min-width: $tablet-width) {
-    grid-area: header;
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+    line-height: 50px;
   }
 }
 

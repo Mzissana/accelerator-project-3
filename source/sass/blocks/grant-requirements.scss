@@ -1,7 +1,8 @@
 .grant-requirements {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  padding: 10px 0 0 0;
 
   @media (min-width: $desktop-width) {
     gap: 45px;
@@ -9,10 +10,26 @@
 
 }
 
+.grant-requirements__header {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+
+  }
+
+}
+
+
+
 .grant-requirements__list {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  font-size: 14px;
+  line-height: 20px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -29,7 +46,7 @@
 }
 
 .grant-requirements__item {
-  padding: 25px 26px;
+  padding: 24px 25px;
   margin: 0 0 0 15px;
   background-color: $background-accent;
   border: 1px solid #ffffff;
@@ -49,14 +66,15 @@
 .grant-requirements__item::before {
   content: attr(data-number);
   position: absolute;
-  top: -5px;
-  left: -10px;
-  width: 24px;
-  height: 24px;
+  top: -6px;
+  left: -16px;
+  width: 32px;
+  height: 32px;
   background-color: $background-accent;
   color: #ffffff;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
