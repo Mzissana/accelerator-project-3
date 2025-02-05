@@ -1,4 +1,4 @@
-.programs-slide {
+.hero-slide {
   color: $on-dark-text-color;
   min-height: 400px;
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@
   }
 }
 
-.programs-slide--internship {
+.hero-slide--internship {
   background-image: image-set(
     url("../../img/programs-internship-mobile@1x.webp") 1x,
     url("../../img/programs-internship-mobile@2x.webp") 2x,
@@ -43,7 +43,7 @@
   }
 }
 
-.programs-slide--belukha {
+.hero-slide--belukha {
   background-image: image-set(
     url("../../img/belukha-card-tablet@1x.webp") 1x,
     url("../../img/belukha-card-tablet@2x.webp") 2x,
@@ -61,7 +61,7 @@
   }
 }
 
-.programs-slide--fisht {
+.hero-slide--fisht {
   background-image: image-set(
     url("../../img/fisht-card-desktop@1x.webp") 1x,
     url("../../img/fisht-card-desktop@2x.webp") 2x,
@@ -70,7 +70,7 @@
   );
 }
 
-.programs-slide--manaraga {
+.hero-slide--manaraga {
   background-image: image-set(
     url("../../img/manaraga-card-mobile@1x.webp") 1x,
     url("../../img/manaraga-card-mobile@2x.webp") 2x,
@@ -79,27 +79,25 @@
   );
 }
 
-.programs-slide__wrapper {
+.hero-slide__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100%;
 }
 
-.programs-slide__info {
+.hero-slide__info {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
   padding: 10px 18px;
   min-height: 100%;
-
   margin-top: auto;
   z-index: 10;
   position: relative;
 }
 
-.programs-slide__header {
+.hero-slide__header {
   color: $extra-text-color;
   background-color: #ffffff;
   border-radius: 12px 12px 0 0;
@@ -119,11 +117,11 @@
     width: 18px;
     height: 18px;
     background-color: #ffffff;
-    mask-image: url("/__spritemap#sprite-programs-angle-mobile-view");
+    mask-image: url("/__spritemap#sprite-hero-angle-mobile-view");
   }
 }
 
-.programs-slide p {
+.hero-slide p {
   color: $main-text-color;
   background-color: #ffffff;
   border-radius: 0 12px 12px 12px;

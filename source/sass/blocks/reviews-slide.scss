@@ -1,0 +1,44 @@
+.reviews-slide {
+  color: $main-text-color;
+  min-height: 472px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 290px;
+  border: 2px solid #316dc2;
+  border-radius: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    min-height: 420px;
+    align-items: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 380px;
+  }
+}
+
+
+.reviews-slide__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100%;
+  padding: 32px 18px;
+
+}
+
+.reviews-slide__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+  position: relative;
+}
+
+.reviews-slide__program-info {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+

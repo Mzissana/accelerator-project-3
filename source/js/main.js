@@ -1,4 +1,7 @@
-// https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
-// import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
+import initProgramsSwiper from './scripts/initialize-programs-swiper.js';
+import initReviewsSwiper from './scripts/initialize-reviews-swiper.js';
+
+//slider
+document.addEventListener('DOMContentLoaded', initProgramsSwiper);
+document.addEventListener('DOMContentLoaded', initReviewsSwiper);
+
