@@ -4,76 +4,105 @@
   gap: 20px;
 
   @media (min-width: $tablet-width) {
-    gap: 22px;
+    gap: 30px;
+    max-width: 498px;
+    margin-bottom: 21px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     grid-area: goal;
+    max-width: initial;
+    gap: 40px;
   }
 }
 
 .about-goal h3 {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 22px;
-  font-weight: 800;
+  font-weight: 400;
   margin: 0;
   align-self: flex-start;
   color: $extra-text-color;
 
   @media (min-width: $tablet-width) {
-    font-size: 25px;
-    line-height: 25px;
-    margin: 1px 0 12px;
+    font-size: 28px;
+    line-height: 28px;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 35px;
-    line-height: 35px;
-    margin: 0 0 16px;
+    font-size: 32px;
+    line-height: 36px;
   }
 }
 
 
 .about-goal p {
-  margin-bottom: 10px;
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 20px;
+
 
   @media (min-width: $tablet-width) {
     gap: 22px;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 
 .about-goal__button {
   width: 223px;
-  padding: 16px 59px 16px 21px;
+  padding: 16px 55px 14px 17px;
   border-radius: 30px;
   border: 1px solid $background-accent;
   color: $extra-text-color;
   text-transform: uppercase;
   position: relative;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.24px;
 
   &::before {
     content: "";
     position: absolute;
     top: 50%;
-    right: 5px;
+    right: 4px;
     width: 34px;
     height: 34px;
     background-color: $background-accent;
     border-radius: 50%;
     translate: 0 -50%;
+
+    @media (min-width: $tablet-width) {
+      width: 46px;
+      height: 46px;
+    }
   }
 
   &::after {
     content: "";
     position: absolute;
     top: 50%;
-    right: 17px;
-    width: 10px;
-    height: 10px;
+    right: 15px;
+    width: 8px;
+    height: 8px;
     background-color: #ffffff;
     mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
     border-radius: 50%;
     translate: 0 -50%;
     rotate: -30deg;
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 79px 20px 29px;
+    width: 279px;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+    font-weight: 500;
+  }
+
 }

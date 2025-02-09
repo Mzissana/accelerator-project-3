@@ -3,3 +3,110 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.subscription-form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.subscription-form__input {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  min-height: 50px;
+}
+
+.subscription-form__input--text-area {
+  min-height: 94px;
+}
+
+.subscription-form__input--city {
+  min-height: 52px;
+  width: 260px;
+}
+
+.subscription-form__checkbox {
+  max-width: 210px;
+  min-height: 42px;
+  padding: 0 0 0 30px;
+  opacity: 0.9;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: $background-extra;
+    translate: 0 -50%;
+    border-radius: 2px;
+  }
+}
+
+.subscription-form__checkbox input {
+ display: none;
+}
+
+
+.subscription-form__button {
+  width: 260px;
+  padding: 16px 55px 14px 17px;
+  border-radius: 30px;
+  border: 1px solid $background-extra;
+  color: $on-dark-text-color;
+  text-transform: uppercase;
+  position: relative;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.24px;
+  background-color: $background-accent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    width: 34px;
+    height: 34px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    translate: 0 -50%;
+
+    @media (min-width: $tablet-width) {
+      width: 46px;
+      height: 46px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 8px;
+    height: 8px;
+    background-color: $background-accent;
+    mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
+    border-radius: 50%;
+    translate: 0 -50%;
+    rotate: -30deg;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 79px 20px 29px;
+    width: 279px;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+    font-weight: 500;
+  }
+
+}

@@ -207,7 +207,7 @@
           </div>
 
           <div class="about__goal about-goal">
-            <h3>Наша цель</h3>
+            <h3 class="about-goal__header">Наша цель</h3>
 
             <p>
               Наша деятельность направлена на повышение квалификации молодых
@@ -244,7 +244,7 @@
                 </p>
               </li>
               <li class="about-features__item">
-                <h3>от 4 200 $ до 8 400 $</h3>
+                <h3>от 4 200 $ <span>до 8 400 $</span></h3>
                 <p>
                   грант всем участникам для комфортного прохождения программы
                 </p>
@@ -731,81 +731,52 @@
       <section class="main__subscription subscription" data-test="form">
         <div class="subscription__wrapper">
           <div class="subscription__form-wrapper">
-            <h2>Напишите нам</h2>
+            <div class="subscription__info">
+              <h2 class="subscription__header">Напишите нам</h2>
 
-            <p>
+            <p class="subscription__subtitle">
               Оставьте ваши контакты, если у вас остались вопросы — мы на них
               ответим!
             </p>
-            <form
-              class="subscription__form subscription-form"
-              action="https://echo.htmlacademy.ru/"
-              method="post"
-            >
-              <label class="subscription-form__label" for="name">Имя</label>
-              <input
-                class="subscription-form__input"
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Имя"
-                required
-              />
+            </div>
 
-              <label class="subscription-form__label" for="phone"
-                >Телефон</label
-              >
-              <input
-                class="subscription-form__input"
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Телефон"
-                pattern="\+?\d{0,15}"
-                data-placeholder="+7 (000)-000-00-00"
-                required
-              />
+            <form class="subscription__form subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="subscription-form__label">
+                Имя
+                <input class="subscription-form__input" type="text" name="name" required />
+              </label>
 
-              <label class="subscription-form__label" for="city"
-                >Выберите город</label
-              >
-              <select
-                class="subscription-form__input"
-                id="city"
-                name="city"
-                required
-              >
-                <option value="" selected>Выберите город</option>
-                <option value="moscow">Москва</option>
-                <option value="spb">Санкт-Петербург</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="ekaterinburg">Екатеринбург</option>
-              </select>
+              <label class="subscription-form__label">
+                Телефон
+                <input class="subscription-form__input" type="tel" name="phone" pattern="\+?\d{0,15}" data-placeholder="+7 (000)-000-00-00" required />
+              </label>
 
-              <label class="subscription-form__label" for="message"
-                >Ваше сообщение</label
-              >
-              <textarea
-                class="subscription-form__input"
-                id="message"
-                name="message"
-                placeholder="Ваше сообщение"
-                rows="4"
-                required
-              ></textarea>
+
+              <label class="subscription-form__label">
+                Ваше сообщение
+                <textarea class="subscription-form__input subscription-form__input--text-area" name="message" rows="4" required></textarea>
+              </label>
+
+              <label class="subscription-form__label">
+                Выберите город
+                <select class="subscription-form__input subscription-form__input--city" name="city" required>
+                  <option value="" disabled selected></option>
+                  <option value="moscow">Москва</option>
+                  <option value="spb">Санкт-Петербург</option>
+                  <option value="novosibirsk">Новосибирск</option>
+                  <option value="ekaterinburg">Екатеринбург</option>
+                </select>
+              </label>
+
 
               <label class="subscription-form__checkbox">
                 <input type="checkbox" name="consent" required />
-                Я согласен на обработку моих персональных данных
+                Я согласен на обработку моих персональных<br> данных
               </label>
 
-              <button
-                class="subscription-form__button button-reset"
-                type="submit"
-              >
-                Отправить
-              </button>
+              <button class="subscription-form__button button-reset" type="submit">Отправить</button>
             </form>
+
           </div>
         </div>
       </section>

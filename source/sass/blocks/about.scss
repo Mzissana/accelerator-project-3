@@ -15,40 +15,21 @@
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    padding: 60px 45px;
-    gap: 26px;
+    padding: 50px 45px;
+    gap:  39px 40px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1440px;
-    padding: 60px 100px;
+    padding: 70px 100px 60px;
     display: grid;
     grid-template-areas: "heading goal"
-    "heading goal"
     "features features"
     ;
   }
 }
 
-.about__wrapper p {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  margin: 0;
 
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 24px;
-    width: 100%;
-  }
-
-  @media (min-width: $desktop-width) {
-    font-size: 16px;
-    line-height: 24px;
-    max-width: 820px;
-  }
-}
-
-.about-features {
+.about .about-features {
   grid-area: features;
 }

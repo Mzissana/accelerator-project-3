@@ -15,19 +15,19 @@
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    padding: 59px 45px 44px;
-    gap: 26px;
+    padding: 100px 45px;
+    gap: 40px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1440px;
-    padding: 120px 206px 120px 100px;
+    padding: 120px 100px;
     display: grid;
     grid-template-areas: "heading grant"
-    "heading grant"
-    "picture grant"
-    ;
-    gap: 0 138px;
+    "picture grant";
+    gap: 40px 32px;
+    align-items: start;
+    grid-template-rows: min-content 1fr;
   }
 }
 
@@ -40,15 +40,13 @@
   align-self: flex-start;
 
   @media (min-width: $tablet-width) {
-    font-size: 25px;
-    line-height: 25px;
-    margin: 1px 0 12px;
+    font-size: 34px;
+    line-height: 50px;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 35px;
-    line-height: 35px;
-    margin: 0 0 16px;
+    font-size: 50px;
+    line-height: 50px;
   }
 }
 
@@ -57,12 +55,15 @@
   flex-direction: column;
   gap: 15px;
 
+
   @media (min-width: $tablet-width) {
-    gap: 22px;
+    gap: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 15px;
+    align-items: flex-start;
+    align-self: start;
+    gap: 30px;
     grid-area: heading;
   }
 }
@@ -75,21 +76,24 @@
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
-    line-height: 24px;
-    width: 100%;
+    line-height: 20px;
+    max-width: 498px;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 16px;
-    line-height: 24px;
-    max-width: 820px;
+    line-height: 26px;
   }
 }
 
 .grant__image {
   grid-area: picture;
+  align-self: start;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .grant__requirements {
   grid-area: grant;
+
 }
