@@ -612,18 +612,18 @@
                       <cite class="review-author__name">Лола Алекс</cite>
                     </blockquote>
 
-                    <ul class="reviews-slide__program-info list-reset">
+                    <ul class="reviews-slide__program-info program-info list-reset">
                       <li>
-                        <dl class="list-reset">
-                          <dt class="list-reset">Программа</dt>
-                          <dd class="list-reset">Masa Art Challenge</dd>
+                        <dl class="list-reset program-info__list">
+                          <dt class="list-reset program-info__title">Программа</dt>
+                          <dd class="list-reset program-info__subtitle">Masa Art Challenge</dd>
                         </dl>
                       </li>
 
                       <li>
-                        <dl class="list-reset">
-                          <dt class="list-reset">Дата</dt>
-                          <dd class="list-reset">Осень 2022</dd>
+                        <dl class="list-reset program-info__list">
+                          <dt class="list-reset program-info__title">Дата</dt>
+                          <dd class="list-reset program-info__subtitle">Осень 2022</dd>
                         </dl>
                       </li>
                     </ul>
@@ -757,7 +757,7 @@
                 <textarea class="subscription-form__input subscription-form__input--text-area" name="message" rows="4" required></textarea>
               </label>
 
-              <label class="subscription-form__label">
+              <label class="subscription-form__label subscription-form__label--city">
                 Выберите город
                 <select class="subscription-form__input subscription-form__input--city" name="city" required>
                   <option value="" disabled selected></option>
@@ -771,7 +771,7 @@
 
               <label class="subscription-form__checkbox">
                 <input type="checkbox" name="consent" required />
-                Я согласен на обработку моих персональных<br> данных
+                Я согласен на обработку моих персональных&nbsp; <span>данных</span>
               </label>
 
               <button class="subscription-form__button button-reset" type="submit">Отправить</button>

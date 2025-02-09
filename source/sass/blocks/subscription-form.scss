@@ -13,6 +13,16 @@
   font-weight: 400;
   margin: 0;
   opacity: 0.8;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 18px;
+    gap: 12px;
+  }
 }
 
 .subscription-form__input {
@@ -24,14 +34,34 @@
 
 .subscription-form__input--text-area {
   min-height: 94px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 90px;
+  }
 }
 
 .subscription-form__input--city {
   min-height: 52px;
   width: 260px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.subscription-form__label--city {
+  @media (min-width: $desktop-width) {
+    line-height: 14px;
+  }
 }
 
 .subscription-form__checkbox {
+  display: flex;
+  flex-wrap: wrap;
   max-width: 210px;
   min-height: 42px;
   padding: 0 0 0 30px;
@@ -48,9 +78,31 @@
     background-color: $background-extra;
     translate: 0 -50%;
     border-radius: 2px;
+
+    @media (min-width: $tablet-width) {
+      top: 24%;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+    min-height: 40px;
+    padding: 0 0 0 30px;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 4px 0 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 5px 0 0 30px;
   }
 }
 
+.subscription-form__check span {
+  display: block;
+}
 .subscription-form__checkbox input {
  display: none;
 }
@@ -102,11 +154,14 @@
 
   @media (min-width: $tablet-width) {
     padding: 20px 79px 20px 29px;
-    width: 279px;
+    width: 352px;
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.28px;
     font-weight: 500;
   }
 
+  @media (min-width: $desktop-width) {
+    width: 350px;
+  }
 }

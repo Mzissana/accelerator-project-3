@@ -5,13 +5,29 @@
   gap: 10px;
   margin: 0;
   max-width: 130px;
+
+  @media (min-width: $tablet-width) {
+
+  }
+
+  @media (min-width: $desktop-width) {
+
+}
 }
 
 .review-author__name {
   color: $extra-text-color;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 18px;
   font-weight: 400;
   font-style: normal;
   text-transform: none;
+
+  @media (min-width: $tablet-width) {
+
+  }
+
+  @media (min-width: $desktop-width) {
+
+  }
 }

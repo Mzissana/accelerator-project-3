@@ -8,10 +8,10 @@
   grid-template-areas:
   "heading buttons"
   "slider slider";
-  padding: 50px 15px;
+  padding: 56px 15px 50px;
   width: 320px;
   overflow: visible;
-  gap: 30px;
+  gap: 34px;
 
   @media (min-width: $tablet-width) {
     padding: 50px 45px;
@@ -30,6 +30,7 @@
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
+  margin: 0;
   color: $extra-text-color;
   grid-area: heading;
 
@@ -45,6 +46,8 @@
     margin: 0;
   }
 }
+
+.reviews
 
 
 .reviews__swiper {

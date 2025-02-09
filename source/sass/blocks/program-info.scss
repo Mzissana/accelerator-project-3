@@ -1,0 +1,21 @@
+.program-info__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.program-info__title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  color: $extra-text-color;
+}
+
+.program-info__subtitle {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  }
