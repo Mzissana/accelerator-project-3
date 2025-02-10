@@ -1,39 +1,43 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
+import 'swiper/css/scrollbar';
 
 function initReviewsSwiper() {
-  let currentDevice = getCurrentDevice(); // Переменная для хранения текущего устройства
+  let currentDevice = getCurrentDevice();
   const swiper = new Swiper('.reviews-swiper', {
-    modules: [Navigation, Pagination],
-    slidesPerView: getSlidesPerView(currentDevice), // Инициализация с текущим количеством слайдов
+    modules: [Navigation, Pagination, Scrollbar],
+    slidesPerView: 'auto',
+    slidesPerGroup: 1,
     spaceBetween: getSpace(currentDevice),
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: '.reviews-swiper-container__button--next',
       prevEl: '.reviews-swiper-container__button--prev',
     },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
+    scrollbar: {
+      el: '.reviews__scrollbar',
+      hide: false,
+      draggable: true,
+      snapOnRelease: true,
+      dragSize: currentDevice === 'desktop' ? 395 : 326,
     },
     simulateTouch: currentDevice !== 'desktop',
-
+    watchOverflow: true,
   });
 
   window.addEventListener('resize', () => {
     const newDevice = getCurrentDevice();
     if (newDevice !== currentDevice) {
       currentDevice = newDevice;
-      const newSlidesPerView = getSlidesPerView(newDevice);
-      const newSpaceBetween = getSpace(newDevice);
-      swiper.params.spaceBetween = newSpaceBetween;
-      swiper.params.slidesPerView = newSlidesPerView;
+      swiper.params.spaceBetween = getSpace(newDevice);
       swiper.params.simulateTouch = newDevice !== 'desktop';
       swiper.update();
+      swiper.updateSize();
+      swiper.navigation.update();
+      swiper.scrollbar.updateSize();
     }
   });
 }
@@ -48,17 +52,6 @@ function getCurrentDevice() {
   }
 }
 
-function getSlidesPerView(device) {
-  switch (device) {
-    case 'desktop':
-      return 3;
-    case 'tablet':
-      return 2;
-    case 'mobile':
-    default:
-      return 1;
-  }
-}
 
 function getSpace(device) {
   switch (device) {

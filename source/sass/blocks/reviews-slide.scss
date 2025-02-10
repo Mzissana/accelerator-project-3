@@ -1,23 +1,3 @@
-.reviews-slide {
-  color: $main-text-color;
-  min-height: 472px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 290px;
-  border: 2px solid #316dc2;
-  border-radius: 16px;
-
-  @media (min-width: $tablet-width) {
-    width: 324px;
-    min-height: 420px;
-    align-items: flex-start;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 380px;
-  }
-}
-
 .reviews-slide__wrapper {
   display: flex;
   flex-direction: column;
@@ -25,6 +5,15 @@
   min-height: 100%;
   padding: 30px 15px;
   gap: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px;
+    gap: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 45px 50px 50px;
+  }
 }
 
 .reviews-slide__info {
@@ -34,18 +23,48 @@
   min-height: 100%;
   position: relative;
   gap: 16px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: initial;
+    width: 100%;
+  }
+
+
 }
 
 .reviews-slide__program-info {
   display: flex;
   flex-direction: row;
   gap: 25px;
+
+  @media (min-width: $tablet-width) {
+    gap: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 auto;
+}
 }
 
 .reviews-slide__content {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+
+}
 }
 
 .reviews-slide__content p:first-child {
@@ -54,6 +73,16 @@
   line-height: 18px;
   color: $extra-text-color;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 26px;
+}
 }
 
 .reviews-slide__content p:nth-child(2) {
@@ -62,4 +91,14 @@
   line-height: 20px;
   color: $main-text-color;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 26px;
+}
 }

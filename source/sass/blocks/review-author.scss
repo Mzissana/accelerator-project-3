@@ -7,12 +7,9 @@
   max-width: 130px;
 
   @media (min-width: $tablet-width) {
-
+    gap: 15px;
+    max-width: 162px;
   }
-
-  @media (min-width: $desktop-width) {
-
-}
 }
 
 .review-author__name {
@@ -24,10 +21,12 @@
   text-transform: none;
 
   @media (min-width: $tablet-width) {
-
+    font-size: 20px;
+  line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
-
+    font-size: 18px;
+  line-height: 24px;
   }
 }

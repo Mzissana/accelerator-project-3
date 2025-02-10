@@ -1,39 +1,44 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
+import 'swiper/css/scrollbar';
 
 function initProgramsSwiper() {
-  let currentDevice = getCurrentDevice(); // Переменная для хранения текущего устройства
+  let currentDevice = getCurrentDevice();
   const swiper = new Swiper('.programs-swiper', {
-    modules: [Navigation, Pagination],
-    slidesPerView: getSlidesPerView(currentDevice), // Инициализация с текущим количеством слайдов
+    modules: [Navigation, Pagination, Scrollbar],
+    slidesPerView: 'auto',
+    slidesPerGroup: 1,
     spaceBetween: getSpace(currentDevice),
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: '.programs-swiper-container__button--next',
       prevEl: '.programs-swiper-container__button--prev',
     },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
+    scrollbar: {
+      el: '.programs__scrollbar',
+      hide: false,
+      draggable: true,
+      snapOnRelease: true,
+      dragSize: currentDevice === 'desktop' ? 395 : 324,
     },
     simulateTouch: currentDevice !== 'desktop',
-
+    watchOverflow: true,
   });
 
   window.addEventListener('resize', () => {
     const newDevice = getCurrentDevice();
     if (newDevice !== currentDevice) {
       currentDevice = newDevice;
-      const newSlidesPerView = getSlidesPerView(newDevice);
-      const newSpaceBetween = getSpace(newDevice);
-      swiper.params.spaceBetween = newSpaceBetween;
-      swiper.params.slidesPerView = newSlidesPerView;
+      swiper.params.slidesPerView = getSlidesPerView(newDevice);
+      swiper.params.spaceBetween = getSpace(newDevice);
       swiper.params.simulateTouch = newDevice !== 'desktop';
       swiper.update();
+      swiper.updateSize();
+      swiper.navigation.update();
+      swiper.scrollbar.updateSize();
     }
   });
 }
