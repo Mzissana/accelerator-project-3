@@ -21,12 +21,14 @@
     padding: 50px 45px 56px;
     gap: 43px 30px;
     width: 768px;
+    position: relative;
   }
 
   @media (min-width: $desktop-width) {
     gap: 45px;
     padding: 62px 100px 64px;
     width: 1440px;
+    position: relative;
   }
 }
 
@@ -135,6 +137,7 @@
     width: 234px;
     position: absolute;
     right: 45px;
+    top: 50px;
   }
 
   @media (min-width: $desktop-width) {

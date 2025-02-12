@@ -35,13 +35,30 @@ function createSwiper(device) {
       nextEl: '.news-swiper-container__button--next',
       prevEl: '.news-swiper-container__button--prev',
     },
+    pagination: {
+      el: '.news-pagination__wrapper',
+      clickable: true,
+      type: 'bullets',
+      renderBullet: function (index, className) {
+        return `<span class="${className}">${index + 1}</span>`;
+      },
+      bulletClass: 'pagination-bullet',
+      bulletActiveClass: 'pagination-bullet-active',
+    },
     simulateTouch: device !== 'desktop',
     on: {
       init: function () {
         updateSlideHeights(this, device);
+        updatePagination(this);
+      },
+      slideChange: function () {
+        updatePagination(this);
       },
     },
   });
+
+  // Явно обновляем пагинацию после инициализации
+  updatePagination(swiper);
 
   return swiper;
 }
@@ -57,6 +74,45 @@ function updateSlideHeights(swiper, device) {
     }
   });
 }
+
+
+function updatePagination(swiper) {
+  const totalSlides = swiper.slides.length;
+  const currentSlide = swiper.activeIndex + 1;
+  const maxVisibleBullets = 4;
+
+  // Получаем элементы пагинации
+  const bullets = document.querySelectorAll('.pagination-bullet');
+
+  // Определяем, какие кнопки должны быть видимыми
+  let startBullet = 1;
+  let endBullet = maxVisibleBullets;
+
+  if (currentSlide <= 3) {
+    // Для первых 3 слайдов показываем 1-4
+    startBullet = 1;
+    endBullet = 4;
+  } else if (currentSlide >= totalSlides - 2) {
+    // Для последних слайдов показываем последние 4
+    startBullet = totalSlides - 3;
+    endBullet = totalSlides;
+  } else {
+    // Для всех остальных слайдов показываем текущий, два предыдущих и один следующий
+    startBullet = currentSlide - 2;
+    endBullet = currentSlide + 1;
+  }
+
+  // Отображаем или скрываем кнопки в зависимости от текущего слайда
+  bullets.forEach((bullet, index) => {
+    const bulletNumber = index + 1;
+    if (bulletNumber >= startBullet && bulletNumber <= endBullet) {
+      bullet.style.display = 'inline-block';
+    } else {
+      bullet.style.display = 'none';
+    }
+  });
+}
+
 
 function getCurrentDevice() {
   if (window.matchMedia('(min-width: 1440px)').matches) {

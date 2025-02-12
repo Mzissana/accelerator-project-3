@@ -1,0 +1,33 @@
+.news-pagination {
+  position: absolute;
+  width: 100%;
+  height: 26px;
+  bottom: 49px;
+  text-align: center;
+
+}
+
+.pagination-bullet {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background-color: $background-main;
+  text-align: center;
+  padding: 6px 0;
+  line-height: 14px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-bullet:hover {
+  background-color: #aaa;
+}
+
+.pagination-bullet-active {
+  background-color: $background-accent;
+  color: white;
+}

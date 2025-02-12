@@ -1,15 +1,15 @@
 .news {
   overflow: hidden;
+  position: relative;
 }
 
 .news__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 50px 15px;
+  padding: 50px 15px 100px;
   width: 320px;
   overflow: hidden;
   gap: 24px;
-
 
   @media (min-width: $tablet-width) {
     padding: 50px 45px;
@@ -29,7 +29,7 @@
   line-height: 20px;
   font-weight: 400;
   color: $extra-text-color;
-  margin: 0;
+  margin: 1px 0 0px 0px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -43,13 +43,11 @@
   }
 }
 
-
 .news__swiper {
   position: relative;
   width: 290px;
   overflow: hidden;
   height: 590px;
-
 
   @media (min-width: $tablet-width) {
     width: 678px;
@@ -63,46 +61,37 @@
   }
 }
 
-
 .news .news-swiper-container__buttons {
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    gap: 4px;
-    justify-content: space-between;
-    top: 82px;
-    right: 49px;
-
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 296px;
+  bottom: 54px;
+  right: 13px;
+  height: 22px;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
     width: auto;
     gap: 4px;
-    justify-content: space-between;
+    grid-area: buttons;
   }
-
-  @media (min-width: $desktop-width) {
-    top: 17%;
-    right: 8%;
-    translate: -9px 3px;
-  }
-
 }
 
 .news .news-swiper-container__button {
-  background-color: #0266c1;
-  color: #FFFFFF;
-  width: 37px;
-  height: 35px;
-  left: 4px;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 0;
+  top: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &:hover {
     background-color: #ffffff;
-    outline: 1px solid #1c3374;
   }
 
   &:focus {
@@ -119,44 +108,42 @@
   }
 }
 
-
 .news .news-swiper-container__button--next {
-  width: 37px;
-  height: 35px;
-  position: relative;
-
-  &::after {
-  content: "";
-  width: 13px;
-  height: 9px;
-  transform: rotate(180deg);
-  mask-image: url("/__spritemap#sprite-long-arrow-icon-view");
-  background-color: #ffffff;
-  background-repeat: no-repeat;
-  z-index: 10;
-  position: absolute;
-  }
-}
-
-
-
-.news .news-swiper-container__button--prev {
-  width: 37px;
-  height: 35px;
+  width: 22px;
+  height: 22px;
   position: relative;
 
   &::after {
     content: "";
     width: 13px;
     height: 9px;
-    mask-image: url("/__spritemap#sprite-long-arrow-icon-view");
-    background-color: #ffffff;
+    mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
+    background-color: $background-accent;
     background-repeat: no-repeat;
+    mask-repeat: no-repeat;
     z-index: 10;
     position: absolute;
   }
 }
 
+.news .news-swiper-container__button--prev {
+  width: 22px;
+  height: 22px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 13px;
+    height: 9px;
+    transform: rotate(180deg);
+    mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
+    background-color: $background-accent;
+    background-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    z-index: 10;
+    position: absolute;
+  }
+}
 
 .news .news-swiper-container__button:hover {
   &::after {
@@ -173,5 +160,33 @@
 .news .swiper-button-prev.swiper-button-disabled,
 .news .swiper-button-next.swiper-button-disabled {
   opacity: 100%;
-  background-color: #999999;
+  &::after {
+    background-color: $disabled;
+  }
+}
+
+.news__wrapper .news__scrollbar {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    grid-area: navigation;
+  }
+}
+
+.news__wrapper .news__scrollbar {
+  margin: 7px 0 0;
+  height: 2px;
+  background: rgba(49, 109, 194, 0.2);
+  width: 562px;
+
+  @media (min-width: $desktop-width) {
+    width: 1136px;
+    margin: 6px 0 0;
+  }
+}
+
+.news__wrapper .swiper-scrollbar-drag {
+  background: #316dc2;
+  border-radius: 2px;
 }
