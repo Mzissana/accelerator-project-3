@@ -15,11 +15,13 @@
     padding: 50px 45px;
     gap: 30px;
     width: 768px;
+    padding: 50px 45px 112px;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 49px;
-    padding: 124px 120px 100px;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 100px 132px;
     width: 1440px;
   }
 }
@@ -35,6 +37,7 @@
   @media (min-width: $tablet-width) {
     font-size: 34px;
     line-height: 50px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -52,6 +55,7 @@
   @media (min-width: $tablet-width) {
     width: 678px;
     height: 730px;
+    margin: 1px 0 0 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -72,11 +76,15 @@
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    gap: 4px;
-    grid-area: buttons;
+    width: 686px;
+    right: 42px;
+    bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1240px;
+    right: 100px;
+    bottom: 68px;
   }
 }
 
@@ -89,6 +97,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+
 
   &:hover {
     background-color: #ffffff;
@@ -163,30 +173,4 @@
   &::after {
     background-color: $disabled;
   }
-}
-
-.news__wrapper .news__scrollbar {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-    grid-area: navigation;
-  }
-}
-
-.news__wrapper .news__scrollbar {
-  margin: 7px 0 0;
-  height: 2px;
-  background: rgba(49, 109, 194, 0.2);
-  width: 562px;
-
-  @media (min-width: $desktop-width) {
-    width: 1136px;
-    margin: 6px 0 0;
-  }
-}
-
-.news__wrapper .swiper-scrollbar-drag {
-  background: #316dc2;
-  border-radius: 2px;
 }

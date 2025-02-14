@@ -5,6 +5,15 @@
   bottom: 49px;
   text-align: center;
 
+  @media (min-width: $tablet-width) {
+    height: 32px;
+    bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 60px;
+  }
+
 }
 
 .pagination-bullet {
@@ -18,13 +27,21 @@
   padding: 6px 0;
   line-height: 14px;
   font-size: 14px;
-  color: #333;
+  color: rgba(49, 109, 194, 0.5);
   cursor: pointer;
   transition: background-color 0.3s;
+
+
+  @media (min-width: $tablet-width) {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    padding: 9px 0;
+  }
 }
 
 .pagination-bullet:hover {
-  background-color: #aaa;
+  background-color: $background-accent;
 }
 
 .pagination-bullet-active {

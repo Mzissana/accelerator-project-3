@@ -151,6 +151,7 @@ function getSpace(device) {
 function getGridFill(device) {
   switch (device) {
     case 'desktop':
+      return 'row';
     case 'tablet':
       return 'row';
     case 'mobile':
@@ -164,6 +165,7 @@ function getGridRows(device) {
     case 'desktop':
       return 1;
     case 'tablet':
+      return 2;
     case 'mobile':
     default:
       return 2;
