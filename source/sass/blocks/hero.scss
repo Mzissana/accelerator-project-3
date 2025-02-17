@@ -46,18 +46,7 @@
 .hero__swiper {
   position: relative;
   width: 100%;
-  width: 290px;
   overflow: hidden;
-
-  @media (min-width: $tablet-width) {
-    width: 674px;
-    overflow: visible;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 1240px;
-    overflow: visible;
-  }
 }
 
 

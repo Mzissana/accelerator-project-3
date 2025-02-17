@@ -1,8 +1,15 @@
 import initProgramsSwiper from './scripts/initialize-programs-swiper.js';
 import initReviewsSwiper from './scripts/initialize-reviews-swiper.js';
 import initNewsSwiper from './scripts/initialize-news-swiper.js';
+import initHeroSwiper from './scripts/initialize-hero-swiper.js';
+import activateMenu from './scripts/activate-menu.js';
+import activateFAQAccordion from './scripts/activate-accordion.js';
+
 
 //slider
 document.addEventListener('DOMContentLoaded', initProgramsSwiper);
 document.addEventListener('DOMContentLoaded', initReviewsSwiper);
 document.addEventListener('DOMContentLoaded', initNewsSwiper);
+document.addEventListener('DOMContentLoaded', initHeroSwiper);
+document.addEventListener('DOMContentLoaded', activateMenu);
+document.addEventListener('DOMContentLoaded', activateFAQAccordion);

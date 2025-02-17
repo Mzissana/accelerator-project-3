@@ -18,9 +18,10 @@
 
 //main
 @import "./blocks/main.scss";
-//hero
 
+//hero
 @import "./blocks/promo.scss";
+@import "./blocks/navigation.scss";
 @import "./blocks/navigation-menu.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/hero-slide.scss";
@@ -34,8 +35,6 @@
 //programs
 @import "./blocks/programs.scss";
 @import "./blocks/programs-slide.scss";
-
-
 
 //grant
 @import "./blocks/grant.scss";
@@ -52,15 +51,11 @@
 @import "./blocks/faq.scss";
 @import "./blocks/faq-accordion.scss";
 
-
 //reviews
 @import "./blocks/reviews.scss";
 @import "./blocks/reviews-slide.scss";
 @import "./blocks/review-author.scss";
 @import "./blocks/program-info.scss";
-
-
-
 
 // contacts
 @import "./blocks/contacts.scss";

@@ -22,8 +22,9 @@
       <section class="promo__navigation navigation">
         <div class="navigation__wrapper">
           <div class="navigation__logo">
-            <img class="navigation__logo-image" src="./img/logo-icon.svg" width="100" height="20"
-              alt="Логотип проекта «Стажировка»" />
+            <svg class="navigation__logo-image" width="30" height="30">
+              <use href="/__spritemap#sprite-logo-icon"></use>
+            </svg>
           </div>
 
           <nav class="navigation__menu navigation-menu navigation-menu--closed">
@@ -38,20 +39,20 @@
                 <li class="navigation-menu__item">
                   <a class="link-reset navigation-menu__link" href="#about">О проекте</a>
                 </li>
-                <li class="navigation-menu__item">
+                <li class="navigation-menu__item navigation-menu__item--sub">
                   <a class="link-reset navigation-menu__link" href="#programs">Программы</a>
 
                   <ul class="list-reset navigation-menu__list navigation-menu__list--sub">
-                    <li class="navigation-menu__item navigation-menu__item--sub">
+                    <li class="navigation-menu__item">
                       <a class="link-reset navigation-menu__link" href="#">Стажировки</a>
                     </li>
-                    <li class="navigation-menu__item navigation-menu__item--sub">
+                    <li class="navigation-menu__item">
                       <a class="link-reset navigation-menu__link" href="#">Волонтёрство</a>
                     </li>
-                    <li class="navigation-menu__item navigation-menu__item--sub">
+                    <li class="navigation-menu__item">
                       <a class="link-reset navigation-menu__link" href="#">Учёба</a>
                     </li>
-                    <li class="navigation-menu__item navigation-menu__item--sub">
+                    <li class="navigation-menu__item">
                       <a class="link-reset navigation-menu__link" href="#">Религия</a>
                     </li>
                   </ul>
@@ -99,8 +100,24 @@
 
       <section class="main__hero hero">
         <div class="hero__swiper hero-swiper">
+          <div class="hero-slide__swiper-pagination swiper-pagination"></div>
           <div class="swiper-wrapper hero-swiper__wrapper">
-            <div class="swiper-slide hero-swiper__slide hero-slide hero-slide--internship">
+
+            <div class="swiper-slide hero-swiper__slide hero-slide hero-slide--travel">
+              <picture>
+                <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/hero-travel-desktop@1x.webp 1x, img/hero-travel-desktop@2x.webp 2x" />
+                <source width="768" height="1024" type="image/webp" media="(min-width: 768px)"
+                  srcset="img/hero-travel-tablet@1x.webp 1x, img/hero-travel-tablet@2x.webp 2x" />
+                <source width="320" height="568" type="image/webp"
+                  srcset="img/hero-travel-mobile@1x.webp 1x, img/hero-travel-mobile@2x.webp 2x" />
+                <source width="1440" height="800" type="image/jpg" media="(min-width: 1440px)"
+                  srcset="img/hero-travel-desktop@1x.jpg 1x, img/hero-travel-desktop@2x.jpg 2x" />
+                <source width="768" height="1024" type="image/jpg" media="(min-width: 768px)"
+                  srcset="img/hero-travel-tablet@1x.jpg 1x, img/hero-travel-tablet@2x.jpg 2x" />
+                <img class="hero-slide__img" src="img/hero-travel-mobile@1x.jpg" srcset="img/hero-travel-mobile@2x.jpg 2x"
+                  alt="Девушка участвующая в программе обмена" width="320" height="568" />
+              </picture>
               <div class="hero-slide__wrapper">
                 <div class="hero-slide__info">
                   <h3 class="hero-slide__header">
@@ -111,14 +128,76 @@
                     студенческий стиль жизни!
                   </p>
 
-                  <button class="hero-slide__button button-reset" type="button">Подробнее</button>
+                  <div class="hero-slide__button-wrapper">
+                    <button class="hero-slide__button button-reset" type="button">Подробнее</button>
+                  </div>
                 </div>
               </div>
             </div>
 
+            <div class="swiper-slide hero-swiper__slide hero-slide hero-slide--volunteer">
+              <picture>
+                <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/hero-volunteer-desktop@1x.webp 1x, img/hero-volunteer-desktop@2x.webp 2x" />
+                <source width="768" height="1024" type="image/webp" media="(min-width: 768px)"
+                  srcset="img/hero-volunteer-tablet@1x.webp 1x, img/hero-volunteer-tablet@2x.webp 2x" />
+                <source width="320" height="568" type="image/webp"
+                  srcset="img/hero-volunteer-mobile@1x.webp 1x, img/hero-volunteer-mobile@2x.webp 2x" />
+                <source width="1440" height="800" type="image/jpg" media="(min-width: 1440px)"
+                  srcset="img/hero-volunteer-desktop@1x.jpg 1x, img/hero-volunteer-desktop@2x.jpg 2x" />
+                <source width="768" height="1024" type="image/jpg" media="(min-width: 768px)"
+                  srcset="img/hero-volunteer-tablet@1x.jpg 1x, img/hero-volunteer-tablet@2x.jpg 2x" />
+                <img class="hero-slide__img" src="img/hero-volunteer-mobile@1x.jpg" srcset="img/hero-volunteer-mobile@2x.jpg 2x"
+                  alt="Групповое фото волонтеров" width="320" height="568" />
+              </picture>
+              <div class="hero-slide__wrapper">
+                <div class="hero-slide__info">
+                  <h3 class="hero-slide__header">
+                    Волонтёрские программы – внесите свой вклад в общество
+                  </h3>
+                  <p>
+                    Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
+                  </p>
+
+                  <div class="hero-slide__button-wrapper">
+                    <button class="hero-slide__button button-reset" type="button">Подробнее</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide hero-swiper__slide hero-slide hero-slide--internship">
+              <picture>
+                <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/hero-internship-desktop@1x.webp 1x, img/hero-internship-desktop@2x.webp 2x" />
+                <source width="768" height="1024" type="image/webp" media="(min-width: 768px)"
+                  srcset="img/hero-internship-tablet@1x.webp 1x, img/hero-internship-tablet@2x.webp 2x" />
+                <source width="320" height="568" type="image/webp"
+                  srcset="img/hero-internship-mobile@1x.webp 1x, img/hero-internship-mobile@2x.webp 2x" />
+                <source width="1440" height="800" type="image/jpg" media="(min-width: 1440px)"
+                  srcset="img/hero-internship-desktop@1x.jpg 1x, img/hero-internship-desktop@2x.jpg 2x" />
+                <source width="768" height="1024" type="image/jpg" media="(min-width: 768px)"
+                  srcset="img/hero-internship-tablet@1x.jpg 1x, img/hero-internship-tablet@2x.jpg 2x" />
+                <img class="hero-slide__img" src="img/hero-internship-mobile@1x.jpg" srcset="img/hero-internship-mobile@2x.jpg 2x"
+                  alt="Группа стажеров за работой" width="320" height="568" />
+              </picture>
+              <div class="hero-slide__wrapper">
+                <div class="hero-slide__info">
+                  <h3 class="hero-slide__header">
+                    Программы стажировок в крупнейших компаниях мира
+                  </h3>
+                  <p>
+                    Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.
+                  </p>
+
+                  <div class="hero-slide__button-wrapper">
+                    <button class="hero-slide__button button-reset" type="button">Подробнее</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
-          <div class="hero__swiper-pagination swiper-pagination"></div>
         </div>
       </section>
 
