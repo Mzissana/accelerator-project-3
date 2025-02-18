@@ -27,13 +27,13 @@
   left: 0;
 
   @media (min-width: $tablet-width) {
-    min-height: 420px;
     min-height: 1024px;
     padding: 0 64px 60px 45px;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 800px;
+    padding: 0 0 60px 100px;
   }
 }
 
@@ -54,26 +54,35 @@
     max-width: 659px;
     grid-template-columns: 355px auto;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 968px;
+    grid-template-columns: 526px auto;
+  }
+
+
 }
 
 .hero-slide__header {
   color: $extra-text-color;
   background-color: #ffffff;
-  border-radius: 0 12px 12px 0;
-  padding: 18px 35px 6px 18px;
-  max-width: 100%;
+  border-radius: 0 14px 14px 0;
+  padding: 20px 33px 15px 14px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
   margin: 0;
   position: relative;
+  max-width: 290px;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 44px;
     max-width: 659px;
-    padding: 30px 40px 24px;
+    padding: 31px 40px 23px;
     grid-area: header;
+    border-radius: 0 30px 30px 0;
+
   }
 
   @media (min-width: $desktop-width) {
@@ -87,10 +96,10 @@
 .hero-slide p {
   color: $main-text-color;
   background-color: #ffffff;
-  border-radius: 0 0 12px 0;
-  padding: 0 27px 15px 14px;
+  border-radius: 0 0 14px 0;
+  padding: 1px 14px 15px 14px;
   max-width: 267px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   margin: 0;
@@ -101,32 +110,39 @@
     font-size: 16px;
     line-height: 20px;
     max-width: 659px;
-    padding: 30px 40px 24px;
+    padding: 0 40px 35px;
     grid-area: paragraph;
+    border-radius: 0 0 0 30px;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 16px;
     line-height: 26px;
-    padding: 40px 50px 30px;
+    padding: 0px 50px 35px;
     max-width: 968px;
   }
 }
 
 .hero-slide__button-wrapper {
   padding: 10px 15px;
-  max-width: 182px;
+  max-width: 184px;
   background-color: $background-extra;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 14px 14px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    max-width: 236px;
+    max-width: 238px;
+    border-radius: 0 0 30px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 249px;
+    padding: 10px 0 0 0;
   }
 }
 
 .hero-slide__button {
-  width: 152px;
+  width: 154px;
   padding: 16px 55px 14px 17px;
   border-radius: 30px;
   border: 1px solid $background-accent;
@@ -153,6 +169,10 @@
       width: 46px;
       height: 46px;
     }
+
+    @media (min-width: $desktop-width) {
+      right: 5px;
+    }
   }
 
   &::after {
@@ -171,19 +191,22 @@
 
   @media (min-width: $tablet-width) {
     padding: 20px 79px 20px 29px;
-    width: 279px;
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.28px;
     font-weight: 500;
     grid-area: button;
-    width: 196px;
+    width: 198px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding: 21px 68px 21px 17px;
+    width: 199px;
+  }
 }
 
 .hero .hero-swiper .hero-slide__swiper-pagination {
-  padding: 10px 0;
+  padding: 3px 0;
   position: absolute;
   left: 15px;
   width: 80px;
@@ -194,10 +217,13 @@
   @media (min-width: $tablet-width) {
     width: 100px;
     height: 40px;
-    padding: 14px 0;
+    padding: 11px 0;
     left: 45px;
+    border-radius: 20px 20px 0 0;
   }
-
+  @media (min-width: $desktop-width) {
+    left: 100px;
+  }
 }
 
 .hero-slide__swiper-pagination .swiper-pagination-bullet {

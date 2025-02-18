@@ -5,6 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/grid';
 
+
 function initNewsSwiper() {
   let currentDevice = getCurrentDevice();
   let swiper = createSwiper(currentDevice);
@@ -57,7 +58,6 @@ function createSwiper(device) {
     },
   });
 
-  // Явно обновляем пагинацию после инициализации
   updatePagination(swiper);
 
   return swiper;
@@ -112,7 +112,6 @@ function updatePagination(swiper) {
     }
   });
 }
-
 
 function getCurrentDevice() {
   if (window.matchMedia('(min-width: 1440px)').matches) {

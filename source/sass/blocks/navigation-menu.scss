@@ -28,8 +28,8 @@
 }
 
 .navigation-menu__toggle {
-  width: 134px;
-  padding: 20px 70px 20px 20px;
+  min-width: 136px;
+  padding: 19px 70px 19px 20px;
   border-radius: 30px;
   border: 1px solid $background-accent;
   background-color: $background-extra;
@@ -66,6 +66,10 @@
     border-radius: 50%;
     translate: 0 -50%;
     rotate: -30deg;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 70px 20px 20px;
   }
 }
 

@@ -30,8 +30,8 @@ function initHeroSwiper() {
     simulateTouch: currentDevice !== 'desktop',
     watchOverflow: true,
     on: {
-      init: updateBottomSpacing, // Устанавливаем корректное положение при инициализации
-      slideChangeTransitionEnd: updateBottomSpacing, // Обновляем при смене слайда
+      init: updateBottomSpacing,
+      slideChangeTransitionEnd: updateBottomSpacing,
     },
   });
 
@@ -45,7 +45,6 @@ function initHeroSwiper() {
     updateBottomSpacing();
   });
 
-  // Обновляем положение после полной загрузки страницы
   window.addEventListener('load', updateBottomSpacing);
 }
 
@@ -61,7 +60,7 @@ function getCurrentDevice() {
 
 function getBottomPadding() {
   if (window.matchMedia('(min-width: 1440px)').matches) {
-    return 50;
+    return 60;
   } else if (window.matchMedia('(min-width: 768px)').matches) {
     return 60;
   } else {
