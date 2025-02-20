@@ -163,7 +163,10 @@
   }
 }
 
-.programs-slide p {
+.programs-slide a {
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
   color: $main-text-color;
   background-color: #ffffff;
   border-radius: 0 12px 12px 12px;
@@ -215,5 +218,45 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+.programs-slide a:hover {
+  &::before {
+    background-color: $background-extra;
+  }
+
+  &::after {
+    background-color: $background-accent;
+    transform: rotate(30deg);
+  }
+}
+
+.programs-slide a:focus {
+  &::after {
+    transform: rotate(30deg);
+  }
+}
+
+.programs-slide a:active {
+  &::before {
+    background-color: $background-extra;
+  }
+
+  &::after {
+    background-color: $background-accent;
+    transform: rotate(30deg);
+    opacity: 0.7;
+  }
+}
+
+.programs-slide a:disabled {
+
+  &::before {
+    background-color: $disabled;
+  }
+
+  &::after {
+    opacity: 0.6;
   }
 }

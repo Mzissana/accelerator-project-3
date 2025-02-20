@@ -15,9 +15,12 @@ function activateFAQAccordion() {
       if (isOpen) {
         // Закрываем, если уже открыт
         item.classList.remove('faq-accordion__item--show');
+        item.classList.remove('faq-accordion__item--active');
         content.style.maxHeight = null;
       } else {
-        // Открываем новый
+        accordionItems.forEach((el) => el.classList.remove('faq-accordion__item--active'));
+
+        item.classList.add('faq-accordion__item--active');
         item.classList.add('faq-accordion__item--show');
         content.style.maxHeight = `${content.scrollHeight }px`;
       }

@@ -28,6 +28,7 @@ function createSwiper(device) {
     spaceBetween: getSpace(device),
     direction: 'horizontal',
     slidesPerView: getSlidesPerView(device),
+    loop: false,
     grid: {
       rows: getGridRows(device),
       fill: getGridFill(device),
@@ -46,7 +47,7 @@ function createSwiper(device) {
       bulletClass: 'pagination-bullet',
       bulletActiveClass: 'pagination-bullet-active',
     },
-    simulateTouch: device !== 'desktop',
+    allowTouchMove: true,
     on: {
       init: function () {
         updateSlideHeights(this, device);

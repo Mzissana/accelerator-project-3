@@ -1,10 +1,10 @@
-.subscription-form {
+.modal-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.subscription-form__label {
+.modal-form__label {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -25,14 +25,14 @@
   }
 }
 
-.subscription-form__input {
+.modal-form__input {
   background-color: transparent;
   border-radius: 8px;
-  border: 1px solid rgb(255, 255, 255, 0.3);
+  border: 1px solid rgba(72, 72, 72, 0.3);
   min-height: 50px;
 }
 
-.subscription-form__input--text-area {
+.modal-form__input--text-area {
   min-height: 94px;
 
   @media (min-width: $tablet-width) {
@@ -44,7 +44,7 @@
   }
 }
 
-.subscription-form__input--city {
+.modal-form__input--city {
   min-height: 52px;
   width: 260px;
 
@@ -53,13 +53,13 @@
   }
 }
 
-.subscription-form__label--city {
+.modal-form__label--city {
   @media (min-width: $desktop-width) {
     line-height: 14px;
   }
 }
 
-.subscription-form__checkbox {
+.modal-form__checkbox {
   display: flex;
   flex-wrap: wrap;
   max-width: 210px;
@@ -75,7 +75,7 @@
     left: 0;
     width: 20px;
     height: 20px;
-    background-color: $background-extra;
+    background-color: $background-accent;
     translate: 0 -50%;
     border-radius: 2px;
 
@@ -100,18 +100,15 @@
   }
 }
 
-.subscription-form__check span {
+.modal-form__check span {
   display: block;
 }
-
-.subscription-form__checkbox input {
- position: absolute;
- left: 10px;
- bottom: 15px;
+.modal-form__checkbox input {
+ display: none;
 }
 
 
-.subscription-form__button {
+.modal-form__button {
   width: 260px;
   padding: 16px 55px 14px 17px;
   border-radius: 30px;
@@ -166,55 +163,5 @@
 
   @media (min-width: $desktop-width) {
     width: 350px;
-  }
-}
-
-
-.subscription-form__button:hover {
-  background-color: $background-extra;
-  color: $extra-text-color;
-
-  &::before {
-    background-color: $background-accent;
-  }
-
-  &::after {
-    background-color: $background-extra;
-    transform: rotate(30deg);
-  }
-}
-
-.subscription-form__button:focus {
-  &::after {
-    transform: rotate(30deg);
-  }
-}
-
-.subscription-form__button:active {
-  background-color: $background-extra;
-  color: rgba(49, 109, 194, 0.7);
-
-  &::before {
-    background-color: $background-accent;
-  }
-
-  &::after {
-    background-color: $background-extra;
-    transform: rotate(30deg);
-    opacity: 0.7;
-  }
-}
-
-.subscription-form__button:disabled {
-  color: $disabled;
-  border-color: $disabled;
-  background-color: transparent;
-
-  &::before {
-    background-color: $disabled;
-  }
-
-  &::after {
-    opacity: 0.6;
   }
 }

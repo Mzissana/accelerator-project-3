@@ -22,12 +22,13 @@ function initHeroSwiper() {
     slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 0,
-    loop: false,
+    autoHeight: true,
+    loop: true,
     pagination: {
       el: '.hero-slide__swiper-pagination',
       clickable: true,
     },
-    simulateTouch: currentDevice !== 'desktop',
+    allowTouchMove: currentDevice !== 'desktop',
     watchOverflow: true,
     on: {
       init: updateBottomSpacing,

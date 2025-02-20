@@ -7,41 +7,38 @@ function isMobile() {
 }
 
 function openMenu() {
-  const overlay = document.createElement('div');
-  overlay.classList.add('navigation-overlay');
-  document.body.appendChild(overlay);
   menu.classList.remove('navigation-menu--closed');
   menu.classList.add('navigation-menu--open');
+  document.body.classList.add('page-body--overlay');
   menuToggle.classList.add('active');
-  overlay.classList.add('visible');
 
   if (isMobile()) {
     logo.style.display = 'none';
   }
-
-  document.body.style.overflow = 'hidden';
-  overlay.addEventListener('click', closeMenu);
   document.addEventListener('click', handleOutsideClick);
   window.addEventListener('resize', handleResize);
 }
 
-function closeMenu() {
-  const overlay = document.querySelector('.navigation-overlay');
-  if (overlay) {
-    overlay.classList.remove('visible');
-    document.body.removeChild(overlay);
+function handleResize() {
+  if (menu.classList.contains('navigation-menu--open')) {
+    logo.style.display = isMobile() ? 'none' : 'block';
   }
+}
 
+function closeMenu() {
   logo.style.display = 'block';
-
+  document.body.classList.remove('page-body--overlay');
   menu.classList.remove('navigation-menu--open');
   menu.classList.add('navigation-menu--closed');
-  document.body.style.overflow = 'visible';
-  menuToggle.classList.remove('active');
   document.body.style.overflow = '';
-
+  menuToggle.classList.remove('active');
   document.removeEventListener('click', handleOutsideClick);
   window.removeEventListener('resize', handleResize);
+
+  // Убираем активные классы со всех пунктов меню
+  document.querySelectorAll('.navigation-menu__link--active').forEach((link) => {
+    link.classList.remove('navigation-menu__link--active');
+  });
 }
 
 function handleOutsideClick(event) {
@@ -50,19 +47,9 @@ function handleOutsideClick(event) {
   }
 }
 
-function handleResize() {
-  if (menu.classList.contains('navigation-menu--open')) {
-    if (isMobile()) {
-      logo.style.display = 'none';
-    } else {
-      logo.style.display = 'block';
-    }
-  }
-}
-
 function activateMenu() {
   menuToggle.addEventListener('click', (event) => {
-    event.stopPropagation(); // Чтобы клик по кнопке не срабатывал как клик вне меню
+    event.stopPropagation();
     if (menu.classList.contains('navigation-menu--open')) {
       closeMenu();
     } else {
@@ -76,24 +63,27 @@ function activateMenu() {
     }
   });
 
-  const subMenus = document.querySelectorAll('.navigation-menu__item > .navigation-menu__link');
+  document.addEventListener('click', handleOutsideClick);
 
-  subMenus.forEach((link) => {
-    link.addEventListener('click', function (event) {
-      const subMenu = this.nextElementSibling;
+  const menuLinks = document.querySelectorAll('.navigation-menu__link');
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const subMenu = link.nextElementSibling;
       if (subMenu && subMenu.classList.contains('navigation-menu__list--sub')) {
         event.preventDefault();
-        subMenu.classList.toggle('open');
-      }
-    });
+        const isOpen = !subMenu.classList.contains('navigation-menu__list--closed');
 
-    link.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        const subMenu = this.nextElementSibling;
-        if (subMenu && subMenu.classList.contains('navigation-menu__list--sub')) {
-          subMenu.classList.toggle('open');
+        // Переключаем состояние подменю
+        subMenu.classList.toggle('navigation-menu__list--closed');
+
+        // Добавляем или убираем активный класс у ссылки
+        if (isOpen) {
+          link.classList.remove('navigation-menu__link--active');
+        } else {
+          link.classList.add('navigation-menu__link--active');
         }
+      } else {
+        closeMenu();
       }
     });
   });

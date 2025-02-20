@@ -55,7 +55,7 @@
 
 .about-goal__button {
   width: 223px;
-  padding: 16px 55px 14px 17px;
+  padding: 0;
   border-radius: 30px;
   border: 1px solid $background-accent;
   color: $extra-text-color;
@@ -64,6 +64,7 @@
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 0.24px;
+  background-color: transparent;
 
   &::before {
     content: "";
@@ -97,7 +98,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 20px 79px 20px 29px;
     width: 279px;
     font-size: 14px;
     line-height: 14px;
@@ -105,4 +105,61 @@
     font-weight: 500;
   }
 
+}
+
+.about-goal__link {
+  padding: 15px 50px 15px 29px;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 79px 20px 29px;
+  }
+}
+
+.about-goal__button:hover {
+  background-color: $background-accent;
+  color: $on-dark-text-color;
+
+  &::before {
+    background-color: $background-extra;
+  }
+
+  &::after {
+    background-color: $background-accent;
+    transform: rotate(30deg);
+  }
+}
+
+.about-goal__button:focus {
+  &::after {
+    transform: rotate(30deg);
+  }
+}
+
+.about-goal__button:active {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: $background-accent;
+
+  &::before {
+    background-color: $background-extra;
+  }
+
+  &::after {
+    background-color: $background-accent;
+    transform: rotate(30deg);
+    opacity: 0.7;
+  }
+}
+
+.about-goal__button:disabled {
+  color: $disabled;
+  border-color: $disabled;
+  background-color: transparent;
+
+  &::before {
+    background-color: $disabled;
+  }
+
+  &::after {
+    opacity: 0.6;
+  }
 }

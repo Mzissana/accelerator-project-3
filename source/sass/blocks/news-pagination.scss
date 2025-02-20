@@ -41,7 +41,20 @@
 }
 
 .pagination-bullet:hover {
-  background-color: $background-accent;
+  background-color: transparent;
+  color: $extra-text-color;
+  outline: 2px solid $background-accent;
+}
+
+.pagination-bullet:focus {
+  background-color: $background-extra;
+  color: $extra-text-color;
+  outline: 2px solid $background-accent;
+}
+
+.pagination-bullet:active {
+  background-color: #275699;
+  color: $on-dark-text-color;
 }
 
 .pagination-bullet-active {

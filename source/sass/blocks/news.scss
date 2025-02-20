@@ -97,25 +97,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-
-  &:hover {
-    background-color: #ffffff;
-  }
-
-  &:focus {
-    background-color: #ffffff;
-    outline: none;
-  }
-
-  &:active {
-    background-color: #1c3374;
-  }
-
-  &:disabled {
-    background-color: #999999;
-  }
+  border: none;
 }
 
 .news .news-swiper-container__button--next {
@@ -156,21 +138,41 @@
 }
 
 .news .news-swiper-container__button:hover {
+  background-color: transparent;
+  border: none;
+  outline: none;
+
   &::after {
-    background-color: #1c3374;
-  }
+      background-color: $background-accent;
+      opacity: 0.7;
+    }
 }
 
 .news .news-swiper-container__button:focus {
+  background-color: $background-extra;
+  border-radius: 50%;
+
   &::after {
-    background-color: #1c3374;
+    background-color: $background-accent;
   }
 }
 
+.news .news-swiper-container__button:active {
+  background-color: $background-extra;
+  border-radius: 50%;
+
+  &::after {
+      background-color: $background-accent;
+      opacity: 0.7;
+    }
+  }
+
 .news .swiper-button-prev.swiper-button-disabled,
 .news .swiper-button-next.swiper-button-disabled {
-  opacity: 100%;
+  opacity: 1;
+
   &::after {
     background-color: $disabled;
+    opacity: 1;
   }
 }

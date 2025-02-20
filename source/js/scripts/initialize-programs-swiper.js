@@ -24,7 +24,7 @@ function initProgramsSwiper() {
       snapOnRelease: true,
       dragSize: currentDevice === 'desktop' ? 395 : 324,
     },
-    simulateTouch: currentDevice !== 'desktop',
+    allowTouchMove: currentDevice !== 'desktop',
     watchOverflow: true,
   });
 
