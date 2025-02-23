@@ -13,7 +13,6 @@
   @media (min-width: $desktop-width) {
     bottom: 60px;
   }
-
 }
 
 .pagination-bullet {
@@ -59,5 +58,5 @@
 
 .pagination-bullet-active {
   background-color: $background-accent;
-  color: white;
+  color: $background-extra;
 }

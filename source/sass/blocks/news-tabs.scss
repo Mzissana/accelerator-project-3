@@ -50,7 +50,6 @@
 
 .news-tabs__navigation-button--active {
   background-color: transparent;
-  outline: none;
   border-radius: 20px;
   color: $extra-text-color;
   opacity: 1;
@@ -82,7 +81,6 @@
 .news-tabs__navigation-button:active {
   background-color: transparent;
   border: none;
-  border-radius: 20px;
   color: $extra-text-color;
   opacity: 1;
   outline: 2px solid $background-accent;

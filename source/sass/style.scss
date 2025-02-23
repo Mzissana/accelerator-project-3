@@ -5,73 +5,73 @@
 
 
 // common
-@import "./common/variables.scss";
-@import "./common/states.scss";
-@import "./common/mixins.scss";
-@import "./common/fonts.scss";
-@import "./common/global.scss";
-@import "./common/visually-hidden.scss";
+@import "./common/variables";
+@import "./common/states";
+@import "./common/mixins";
+@import "./common/fonts";
+@import "./common/global";
+@import "./common/visually-hidden";
 
 // page
-@import "./blocks/page-body.scss";
+@import "./blocks/page-body";
 
 
-//main
-@import "./blocks/main.scss";
+// main
+@import "./blocks/main";
 
-//hero
-@import "./blocks/promo.scss";
-@import "./blocks/navigation.scss";
-@import "./blocks/navigation-menu.scss";
-@import "./blocks/hero.scss";
-@import "./blocks/hero-slide.scss";
+// hero
+@import "./blocks/promo";
+@import "./blocks/navigation";
+@import "./blocks/navigation-menu";
+@import "./blocks/hero";
+@import "./blocks/hero-slide";
 
-//about
-@import "./blocks/about.scss";
-@import "./blocks/about-info.scss";
-@import "./blocks/about-goal.scss";
-@import "./blocks/about-features.scss";
+// about
+@import "./blocks/about";
+@import "./blocks/about-info";
+@import "./blocks/about-goal";
+@import "./blocks/about-features";
 
-//programs
-@import "./blocks/programs.scss";
-@import "./blocks/programs-slide.scss";
+// programs
+@import "./blocks/programs";
+@import "./blocks/programs-slide";
 
-//grant
-@import "./blocks/grant.scss";
-@import "./blocks/grant-requirements.scss";
+// grant
+@import "./blocks/grant";
+@import "./blocks/grant-requirements";
 
-//news
-@import "./blocks/news.scss";
-@import "./blocks/news-swiper.scss";
-@import "./blocks/news-slide.scss";
-@import "./blocks/news-tabs.scss";
-@import "./blocks/news-pagination.scss";
+// news
+@import "./blocks/news";
+@import "./blocks/news-swiper";
+@import "./blocks/news-slide";
+@import "./blocks/news-tabs";
+@import "./blocks/news-pagination";
 
-//faq
-@import "./blocks/faq.scss";
-@import "./blocks/faq-accordion.scss";
+// faq
+@import "./blocks/faq";
+@import "./blocks/faq-accordion";
 
-//reviews
-@import "./blocks/reviews.scss";
-@import "./blocks/reviews-slide.scss";
-@import "./blocks/review-author.scss";
-@import "./blocks/program-info.scss";
+// reviews
+@import "./blocks/reviews";
+@import "./blocks/reviews-slide";
+@import "./blocks/review-author";
+@import "./blocks/program-info";
 
 // contacts
-@import "./blocks/contacts.scss";
-@import "./blocks/contact.scss";
+@import "./blocks/contacts";
+@import "./blocks/contact";
 
 // form
-@import "./blocks/subscription.scss";
-@import "./blocks/subscription-form.scss";
-@import "./blocks/subscription-dropdown.scss";
+@import "./blocks/subscription";
+@import "./blocks/subscription-form";
+@import "./blocks/subscription-dropdown";
 
 // footer
-@import "./blocks/footer.scss";
-@import "./blocks/footer-links.scss";
-@import "./blocks/socials.scss";
+@import "./blocks/footer";
+@import "./blocks/footer-links";
+@import "./blocks/socials";
 
-//modal
-@import "./blocks/modal.scss";
-@import "./blocks/modal-form.scss";
-@import "./blocks/modal-dropdown.scss";
+// modal
+@import "./blocks/modal";
+@import "./blocks/modal-form";
+@import "./blocks/modal-dropdown";

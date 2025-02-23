@@ -73,7 +73,6 @@
   @media (min-width: $tablet-width) {
     max-width: 100%;
     min-height: 40px;
-    padding: 0 0 0 30px;
     flex-wrap: nowrap;
     align-items: flex-start;
     padding: 4px 0 0 30px;
@@ -87,12 +86,12 @@
 }
 
 
-
 .modal-form__checkbox span {
   display: block;
 }
+
 .modal-form__checkbox input {
- display: none;
+  display: none;
 }
 
 
@@ -111,7 +110,6 @@
 
   @media (min-width: $tablet-width) {
     padding: 20px 79px 20px 29px;
-    width: 352px;
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.28px;
@@ -200,7 +198,6 @@
     opacity: 0.6;
   }
 }
-
 
 
 .modal-form__input:hover,
@@ -304,9 +301,4 @@
 
 .modal-form__checkbox-input:disabled + .modal-form__checkbox-mark::before {
   opacity: 0.3;
-}
-
-.modal-form__input--error {
-  border-color: #ff5e66;
-  background-color: rgba(255, 94, 102, 0.2);
 }

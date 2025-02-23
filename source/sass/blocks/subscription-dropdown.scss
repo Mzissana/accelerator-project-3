@@ -1,20 +1,20 @@
 .subscription-dropdown {
   position: relative;
   max-width: 100%;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   min-height: 52px;
   padding: 0;
-
+  z-index: 10;
 }
 
 .subscription-dropdown__button {
   width: 100%;
-  padding: 0;
+  padding: 0 20px;
   font-family: inherit;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  color: #F0EFE9;
+  color: #f0efe9;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -23,6 +23,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 50px;
+  z-index: 100;
 }
 
 .subscription-dropdown__button::after {
@@ -43,7 +44,7 @@
   transition: 0.3s ease;
 }
 
-.subscription-dropdown__list {
+.subscription-dropdown > .subscription-dropdown__list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -56,14 +57,15 @@
   border: none;
   border-radius: 8px;
   display: none;
-  z-index: 1;
-  overflow: hidden;
 }
 
-.subscription-dropdown--open  .subscription-dropdown__list {
+.subscription__form .subscription-dropdown--open .subscription-dropdown__list {
   display: block;
   margin-top: 5px;
   color: $main-text-color;
+  background-color: $background-extra;
+  opacity: 100%;
+  z-index: 1000;
 }
 
 .subscription-dropdown__item:first-child {
@@ -73,8 +75,8 @@
 .subscription-dropdown__item {
   padding: 17px;
   cursor: pointer;
-  transition: background-color 0.2s;
   min-height: 48px;
+  opacity: 100%;
 
   &:active {
     background-color: $background-accent;

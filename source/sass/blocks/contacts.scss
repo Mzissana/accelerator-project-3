@@ -84,7 +84,7 @@
   @media (min-width: $desktop-width) {
     gap: 53px;
     width: 604px;
-    margin: auto 0 0 0;
+    margin: auto 0 0;
     align-items: flex-start;
     padding: 0 0 51px;
   }
@@ -92,7 +92,6 @@
 
 .contacts__item {
   display: flex;
-  align-items: center;
   flex-direction: column;
   gap: 15px;
   align-items: flex-start;

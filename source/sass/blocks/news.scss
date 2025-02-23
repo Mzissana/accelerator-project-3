@@ -12,7 +12,6 @@
   gap: 24px;
 
   @media (min-width: $tablet-width) {
-    padding: 50px 45px;
     gap: 30px;
     width: 768px;
     padding: 50px 45px 112px;
@@ -31,7 +30,7 @@
   line-height: 20px;
   font-weight: 400;
   color: $extra-text-color;
-  margin: 1px 0 0px 0px;
+  margin: 1px 0 0;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -55,7 +54,7 @@
   @media (min-width: $tablet-width) {
     width: 678px;
     height: 730px;
-    margin: 1px 0 0 0;
+    margin: 1px 0 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -143,9 +142,9 @@
   outline: none;
 
   &::after {
-      background-color: $background-accent;
-      opacity: 0.7;
-    }
+    background-color: $background-accent;
+    opacity: 0.7;
+  }
 }
 
 .news .news-swiper-container__button:focus {
@@ -162,10 +161,10 @@
   border-radius: 50%;
 
   &::after {
-      background-color: $background-accent;
-      opacity: 0.7;
-    }
+    background-color: $background-accent;
+    opacity: 0.7;
   }
+}
 
 .news .swiper-button-prev.swiper-button-disabled,
 .news .swiper-button-next.swiper-button-disabled {

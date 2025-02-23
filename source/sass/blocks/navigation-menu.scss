@@ -81,7 +81,6 @@
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, min-width 0.2s ease;
 
 
-
   &::before {
     content: "";
     position: absolute;
@@ -116,8 +115,6 @@
 }
 
 
-
-
 .navigation-menu--closed .navigation-menu__toggle:hover,
 .navigation-menu--closed .navigation-menu__toggle:focus {
   background-color: $background-accent;
@@ -132,7 +129,6 @@
     background-color: $background-accent;
   }
 }
-
 
 
 .navigation-menu__wrapper {
@@ -186,6 +182,7 @@
 
 .navigation-menu__item--sub > .navigation-menu__link {
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
@@ -205,6 +202,7 @@
 
 .navigation-menu__link {
   opacity: 0.7;
+
   &:hover {
     color: $on-dark-text-color;
     opacity: 1;

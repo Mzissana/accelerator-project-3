@@ -23,6 +23,7 @@ function initNewsSwiper() {
 }
 
 function createSwiper(device) {
+  reorderSlides();
   const swiper = new Swiper('.news-swiper', {
     modules: [Navigation, Pagination, Grid],
     spaceBetween: getSpace(device),
@@ -60,7 +61,6 @@ function createSwiper(device) {
   });
 
   updatePagination(swiper);
-
   return swiper;
 }
 
@@ -81,29 +81,21 @@ function updatePagination(swiper) {
   const totalSlides = swiper.slides.length;
   const currentSlide = swiper.activeIndex + 1;
   const maxVisibleBullets = 4;
-
-  // Получаем элементы пагинации
   const bullets = document.querySelectorAll('.pagination-bullet');
-
-  // Определяем, какие кнопки должны быть видимыми
   let startBullet = 1;
   let endBullet = maxVisibleBullets;
 
   if (currentSlide <= 3) {
-    // Для первых 3 слайдов показываем 1-4
     startBullet = 1;
     endBullet = 4;
   } else if (currentSlide >= totalSlides - 2) {
-    // Для последних слайдов показываем последние 4
     startBullet = totalSlides - 3;
     endBullet = totalSlides;
   } else {
-    // Для всех остальных слайдов показываем текущий, два предыдущих и один следующий
     startBullet = currentSlide - 2;
     endBullet = currentSlide + 1;
   }
 
-  // Отображаем или скрываем кнопки в зависимости от текущего слайда
   bullets.forEach((bullet, index) => {
     const bulletNumber = index + 1;
     if (bulletNumber >= startBullet && bulletNumber <= endBullet) {
@@ -123,6 +115,44 @@ function getCurrentDevice() {
     return 'mobile';
   }
 }
+
+let originalSlideOrder = []; // To store the original order of slides
+
+function reorderSlides() {
+  const slides = document.querySelectorAll('.news-swiper__slide');
+  const swiperWrapper = slides[0].parentNode; // Get the parent element (the wrapper of the slides)
+
+  // Track the original order on the first load or if the page is resized back to its original state
+  if (originalSlideOrder.length === 0) {
+    originalSlideOrder = Array.from(slides); // Store the original order of slides
+  }
+
+  const currentDevice = getCurrentDevice();
+
+  // Reset to the original order if we are not on tablet
+  if (currentDevice !== 'tablet') {
+    originalSlideOrder.forEach((slide) => {
+      swiperWrapper.appendChild(slide); // Re-attach the slides to the wrapper in their original order
+    });
+  }
+
+  // Swap slides only when the device is tablet
+  if (currentDevice === 'tablet') {
+    // If it's a tablet, first reset to the original order
+    originalSlideOrder.forEach((slide) => {
+      swiperWrapper.appendChild(slide); // Re-attach slides to the original order
+    });
+
+    // Now swap slides 2 and 3 (index 1 and 2)
+    const slide2 = slides[1]; // 2nd slide
+    const slide3 = slides[2]; // 3rd slide
+
+    // Swap the DOM elements
+    swiperWrapper.insertBefore(slide3, slide2); // Move slide3 before slide2
+  }
+}
+
+
 
 function getSlidesPerView(device) {
   switch (device) {
@@ -153,7 +183,7 @@ function getGridFill(device) {
     case 'desktop':
       return 'row';
     case 'tablet':
-      return 'row';
+      return 'column';
     case 'mobile':
     default:
       return 'column';

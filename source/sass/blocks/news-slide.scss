@@ -33,30 +33,33 @@
 }
 
 .news-slide--interview .news-slide__wrapper {
-  background-image: image-set(
-    url("../../img/news-interview-background-mobile@1x.webp") 1x,
-    url("../../img/news-interview-background-mobile@2x.webp") 2x,
-    url("../../img/news-interview-background-mobile@1x.png") 1x,
-    url("../../img/news-interview-background-mobile@2x.png") 2x
-  );
+  background-image:
+    image-set(
+      url("../../img/news-interview-background-mobile@1x.webp") 1x,
+      url("../../img/news-interview-background-mobile@2x.webp") 2x,
+      url("../../img/news-interview-background-mobile@1x.png") 1x,
+      url("../../img/news-interview-background-mobile@2x.png") 2x
+    );
 
   @media (min-width: $tablet-width) {
-    background-image: image-set(
-    url("../../img/news-interview-background-tablet@1x.webp") 1x,
-    url("../../img/news-interview-background-tablet@2x.webp") 2x,
-    url("../../img/news-interview-background-tablet@1x.jpg") 1x,
-    url("../../img/news-interview-background-tablet@2x.jpg") 2x
-  );
+    background-image:
+      image-set(
+        url("../../img/news-interview-background-tablet@1x.webp") 1x,
+        url("../../img/news-interview-background-tablet@2x.webp") 2x,
+        url("../../img/news-interview-background-tablet@1x.jpg") 1x,
+        url("../../img/news-interview-background-tablet@2x.jpg") 2x
+      );
   }
 
 
   @media (min-width: $desktop-width) {
-    background-image: image-set(
-      url("../../img/news-interview-background-desktop@1x.webp") 1x,
-      url("../../img/news-interview-background-desktop@2x.webp") 2x,
-      url("../../img/news-interview-background-desktop@1x.jpg") 1x,
-      url("../../img/news-interview-background-desktop@2x.jpg") 2x
-    );
+    background-image:
+      image-set(
+        url("../../img/news-interview-background-desktop@1x.webp") 1x,
+        url("../../img/news-interview-background-desktop@2x.webp") 2x,
+        url("../../img/news-interview-background-desktop@1x.jpg") 1x,
+        url("../../img/news-interview-background-desktop@2x.jpg") 2x
+      );
   }
 }
 
@@ -64,72 +67,77 @@
   background-size: contain;
   border-radius: 12px;
   background-repeat: no-repeat;
-  background-image: image-set(
-    url("../../img/news-travel-background-mobile@1x.webp") 1x,
-    url("../../img/news-travel-background-mobile@2x.webp") 2x,
-    url("../../img/news-travel-background-mobile@1x.jpg") 1x,
-    url("../../img/news-travel-background-mobile@2x.jpg") 2x
-  );
+  background-image:
+    image-set(
+      url("../../img/news-travel-background-mobile@1x.webp") 1x,
+      url("../../img/news-travel-background-mobile@2x.webp") 2x,
+      url("../../img/news-travel-background-mobile@1x.jpg") 1x,
+      url("../../img/news-travel-background-mobile@2x.jpg") 2x
+    );
 
 
   @media (min-width: $tablet-width) {
-    background-image: image-set(
-      url("../../img/news-travel-background-tablet@1x.webp") 1x,
-      url("../../img/news-travel-background-tablet@2x.webp") 2x,
-      url("../../img/news-travel-background-tablet@1x.jpg") 1x,
-      url("../../img/news-travel-background-tablet@2x.jpg") 2x
-    );
+    background-image:
+      image-set(
+        url("../../img/news-travel-background-tablet@1x.webp") 1x,
+        url("../../img/news-travel-background-tablet@2x.webp") 2x,
+        url("../../img/news-travel-background-tablet@1x.jpg") 1x,
+        url("../../img/news-travel-background-tablet@2x.jpg") 2x
+      );
   }
 
   @media (min-width: $desktop-width) {
-    background-image: image-set(
-      url("../../img/news-travel-background-desktop@1x.webp") 1x,
-      url("../../img/news-travel-background-desktop@2x.webp") 2x,
-      url("../../img/news-travel-background-desktop@1x.jpg") 1x,
-      url("../../img/news-travel-background-desktop@2x.jpg") 2x
-    );
+    background-image:
+      image-set(
+        url("../../img/news-travel-background-desktop@1x.webp") 1x,
+        url("../../img/news-travel-background-desktop@2x.webp") 2x,
+        url("../../img/news-travel-background-desktop@1x.jpg") 1x,
+        url("../../img/news-travel-background-desktop@2x.jpg") 2x
+      );
   }
 }
 
 
 .news-slide--volunteer .news-slide__wrapper {
-  background-image: image-set(
-    url("../../img/news-volunteer-background-tablet@1x.webp") 1x,
-    url("../../img/news-volunteer-background-tablet@2x.webp") 2x,
-    url("../../img/news-volunteer-background-tablet@1x.jpg") 1x,
-    url("../../img/news-volunteer-background-tablet@2x.jpg") 2x
-  );
+  background-image:
+    image-set(
+      url("../../img/news-volunteer-background-tablet@1x.webp") 1x,
+      url("../../img/news-volunteer-background-tablet@2x.webp") 2x,
+      url("../../img/news-volunteer-background-tablet@1x.jpg") 1x,
+      url("../../img/news-volunteer-background-tablet@2x.jpg") 2x
+    );
 
   @media (min-width: $desktop-width) {
-    background-image: image-set(
-      url("../../img/news-volunteer-background-desktop@1x.webp") 1x,
-      url("../../img/news-volunteer-background-desktop@2x.webp") 2x,
-      url("../../img/news-volunteer-background-desktop@1x.jpg") 1x,
-      url("../../img/news-volunteer-background-desktop@2x.jpg") 2x
-    );
+    background-image:
+      image-set(
+        url("../../img/news-volunteer-background-desktop@1x.webp") 1x,
+        url("../../img/news-volunteer-background-desktop@2x.webp") 2x,
+        url("../../img/news-volunteer-background-desktop@1x.jpg") 1x,
+        url("../../img/news-volunteer-background-desktop@2x.jpg") 2x
+      );
   }
 }
 
 
 .news-slide--career .news-slide__wrapper {
-  background-image: image-set(
-    url("../../img/news-career-background-tablet@1x.webp") 1x,
-    url("../../img/news-career-background-tablet@2x.webp") 2x,
-    url("../../img/news-career-background-tablet@1x.jpg") 1x,
-    url("../../img/news-career-background-tablet@2x.jpg") 2x
-  );
+  background-image:
+    image-set(
+      url("../../img/news-career-background-tablet@1x.webp") 1x,
+      url("../../img/news-career-background-tablet@2x.webp") 2x,
+      url("../../img/news-career-background-tablet@1x.jpg") 1x,
+      url("../../img/news-career-background-tablet@2x.jpg") 2x
+    );
 
   @media (min-width: $desktop-width) {
-    background-image: image-set(
-      url("../../img/news-career-background-desktop@1x.webp") 1x,
-      url("../../img/news-career-background-desktop@2x.webp") 2x,
-      url("../../img/news-career-background-desktop@1x.jpg") 1x,
-      url("../../img/news-career-background-desktop@2x.jpg") 2x
-    );
+    background-image:
+      image-set(
+        url("../../img/news-career-background-desktop@1x.webp") 1x,
+        url("../../img/news-career-background-desktop@2x.webp") 2x,
+        url("../../img/news-career-background-desktop@1x.jpg") 1x,
+        url("../../img/news-career-background-desktop@2x.jpg") 2x
+      );
   }
 }
-
-
 
 
 .news-slide:nth-child(odd) .news-slide__wrapper {
@@ -139,7 +147,7 @@
   }
 }
 
-.news-slide:nth-child(even) .news-slide__info p {
+.news-slide:nth-child(even) .news-slide__info a {
   @media (max-width: $mobile-width-only) {
     padding: 13px 57px 11px 0;
   }
@@ -182,15 +190,6 @@
   }
 }
 
-.news .swiper-slide-active .news-slide__wrapper {
-  @media (min-width: $desktop-width) {
-    min-width: 604px;
-    height: 400px;
-    background-size: 604px 400px;
-  }
-}
-
-
 .news .swiper-slide-next {
   @media (min-width: $desktop-width) {
     max-width: 286px;
@@ -212,14 +211,6 @@
   }
 }
 
-.news .swiper-slide-active .news-slide__wrapper p {
-  @media (min-width: $desktop-width) {
-
-  }
-}
-
-
-
 .news-slide__info {
   display: flex;
   flex-direction: column;
@@ -237,14 +228,12 @@
   @media (min-width: $desktop-width) {
     padding: 0 42px 0 0;
   }
-
-
 }
 
 .news-slide__info span {
   background-color: $background-main;
   color: $extra-text-color;
-  padding: 8px 14px 0px 0;
+  padding: 8px 14px 0 0;
   max-width: min-content;
   border-radius: 0 12px 0 0;
   position: relative;
@@ -300,7 +289,6 @@
     line-height: 26px;
     padding: 10px 23px 4px 0;
     max-width: 190px;
-
   }
 
   &::after {
@@ -327,7 +315,7 @@
   font-weight: 400;
   margin: 0;
   position: relative;
-  border-radius: 0 12px 0 12px;
+  border-radius: 0 12px;
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
@@ -409,7 +397,6 @@
 }
 
 .news-slide a:disabled {
-
   &::before {
     background-color: $disabled;
   }
@@ -418,7 +405,6 @@
     opacity: 0.6;
   }
 }
-
 
 
 .news-slide > div {
@@ -444,10 +430,9 @@
   }
 }
 
-
-.news .swiper-slide-active div  {
+.news .swiper-slide-active div {
   &::after {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $desktop-width) {
       right: 120px;
     }
   }

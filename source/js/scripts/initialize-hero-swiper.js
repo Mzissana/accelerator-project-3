@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 function updateBottomSpacing() {
   const activeSlide = document.querySelector('.swiper-slide-active');
   const infoBlock = activeSlide?.querySelector('.hero-slide__info');
-  const pagination = document.querySelector('.hero-slide__swiper-pagination');
+  const pagination = document.querySelector('.hero-swiper__swiper-pagination');
 
   if (infoBlock && pagination) {
     const targetBottom = infoBlock.offsetHeight + getBottomPadding();
@@ -25,7 +25,7 @@ function initHeroSwiper() {
     autoHeight: true,
     loop: true,
     pagination: {
-      el: '.hero-slide__swiper-pagination',
+      el: '.hero-swiper__swiper-pagination',
       clickable: true,
       renderBullet: (index, className) => `<button type="button" class="${className}" tabindex="0" aria-label="Go to slide ${index + 1}"></button>`,
     },

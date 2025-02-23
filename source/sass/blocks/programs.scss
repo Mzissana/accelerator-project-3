@@ -5,19 +5,19 @@
 .programs__wrapper {
   display: grid;
   grid-template-areas:
-  "heading buttons"
-  "slider slider"
-  "button button";
-  padding: 50px 15px 50px;
+    "heading buttons"
+    "slider  slider"
+    "button  button";
+  padding: 50px 15px;
   width: 320px;
   overflow: visible;
   gap: 30px;
 
   @media (min-width: $tablet-width) {
     grid-template-areas:
-    "heading heading"
-    "slider slider"
-    "navigation buttons";
+      "heading    heading"
+      "slider     slider"
+      "navigation buttons";
     padding: 50px 45px;
     gap: 43px 30px;
     width: 768px;
@@ -38,25 +38,24 @@
   font-weight: 400;
   color: $extra-text-color;
   grid-area: heading;
-  margin: 6px 0 4px 0;
+  margin: 6px 0 4px;
 
   @media (min-width: $tablet-width) {
     font-size: 34px;
     line-height: 50px;
-    margin: 3px 0 0 0;
+    margin: 3px 0 0;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 50px;
     line-height: 50px;
-    margin: 3px 0 0 0;
+    margin: 3px 0 0;
   }
 }
 
 
 .programs__swiper {
   position: relative;
-  width: 100%;
   grid-area: slider;
   width: 290px;
   overflow: hidden;
@@ -209,65 +208,63 @@
   gap: 4px;
   top: 82px;
   right: 49px;
- justify-content: flex-end;
+  justify-content: flex-end;
 
-@media (min-width: $tablet-width) {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  gap: 4px;
-  grid-area: buttons;
-}
-
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 4px;
+    grid-area: buttons;
+  }
 }
 
 .programs .programs-swiper-container__button {
-width: 37px;
-height: 20px;
-left: 4px;
-display: flex;
-justify-content: center;
-align-items: center;
+  width: 37px;
+  height: 20px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .programs .programs-swiper-container__button--next {
-width: 28px;
-height: 41px;
-position: relative;
+  width: 28px;
+  height: 41px;
+  position: relative;
 
-&::after {
-content: "";
-width: 13px;
-height: 9px;
-mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
-background-color: $background-accent;
-background-repeat: no-repeat;
-mask-repeat: no-repeat;
-z-index: 10;
-position: absolute;
+  &::after {
+    content: "";
+    width: 13px;
+    height: 9px;
+    mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
+    background-color: $background-accent;
+    background-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    z-index: 10;
+    position: absolute;
+  }
 }
-}
-
 
 
 .programs .programs-swiper-container__button--prev {
-width: 28px;
-height: 41px;
-position: relative;
+  width: 28px;
+  height: 41px;
+  position: relative;
 
-&::after {
-  content: "";
-  width: 13px;
-  height: 9px;
-  transform: rotate(180deg);
-  mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
-  background-color: $background-accent;
-  background-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  z-index: 10;
-  position: absolute;
-}
+  &::after {
+    content: "";
+    width: 13px;
+    height: 9px;
+    transform: rotate(180deg);
+    mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
+    background-color: $background-accent;
+    background-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    z-index: 10;
+    position: absolute;
+  }
 }
 
 .programs .programs-swiper-container__button:hover {
@@ -276,9 +273,9 @@ position: relative;
   outline: none;
 
   &::after {
-      background-color: $background-accent;
-      opacity: 0.7;
-    }
+    background-color: $background-accent;
+    opacity: 0.7;
+  }
 }
 
 .programs .programs-swiper-container__button:focus {
@@ -295,10 +292,10 @@ position: relative;
   border-radius: 50%;
 
   &::after {
-      background-color: $background-accent;
-      opacity: 0.7;
-    }
+    background-color: $background-accent;
+    opacity: 0.7;
   }
+}
 
 .programs .swiper-button-prev.swiper-button-disabled,
 .programs .swiper-button-next.swiper-button-disabled {
@@ -310,30 +307,25 @@ position: relative;
   }
 }
 
-
-.programs__wrapper .programs__scrollbar {
+.programs .programs__scrollbar {
   display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-    grid-area: navigation;
-  }
-}
-
-.programs__wrapper .programs__scrollbar {
   margin: 7px 0 0;
   height: 2px;
   background: rgba(49, 109, 194, 0.2);
   width: 562px;
 
+  @media (min-width: $tablet-width) {
+    display: block;
+    grid-area: navigation;
+  }
+
   @media (min-width: $desktop-width) {
     width: 1136px;
     margin: 6px 0 0;
-
   }
 }
 
 .programs__wrapper .swiper-scrollbar-drag {
-  background: #316DC2;
+  background: #316dc2;
   border-radius: 2px;
 }

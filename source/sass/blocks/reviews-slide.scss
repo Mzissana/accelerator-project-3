@@ -35,8 +35,6 @@
     gap: initial;
     width: 100%;
   }
-
-
 }
 
 .reviews-slide__program-info {
@@ -50,7 +48,7 @@
 
   @media (min-width: $desktop-width) {
     margin: 0 0 0 auto;
-}
+  }
 }
 
 .reviews-slide__content {
@@ -61,10 +59,6 @@
   @media (min-width: $tablet-width) {
     gap: 24px;
   }
-
-  @media (min-width: $desktop-width) {
-
-}
 }
 
 .reviews-slide__content p:first-child {
@@ -82,7 +76,7 @@
   @media (min-width: $desktop-width) {
     font-size: 24px;
     line-height: 26px;
-}
+  }
 }
 
 .reviews-slide__content p:nth-child(2) {
@@ -100,5 +94,5 @@
   @media (min-width: $desktop-width) {
     font-size: 16px;
     line-height: 26px;
-}
+  }
 }

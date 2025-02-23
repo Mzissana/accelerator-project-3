@@ -6,7 +6,6 @@
   min-width: 100%;
 
   @media (min-width: $tablet-width) {
-    min-height: 420px;
     align-items: flex-start;
     min-height: 1024px;
   }
@@ -49,7 +48,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-areas:
-      "header header"
+      "header    header"
       "paragraph button";
     max-width: 659px;
     grid-template-columns: 355px auto;
@@ -115,8 +114,8 @@
 .hero-slide p {
   color: $main-text-color;
   background-color: #ffffff;
-  border-radius: 0 0 14px 0;
-  padding: 1px 14px 15px 14px;
+  border-radius: 0 0 14px;
+  padding: 1px 14px 15px;
   max-width: 267px;
   font-size: 16px;
   line-height: 20px;
@@ -136,7 +135,7 @@
   @media (min-width: $desktop-width) {
     font-size: 16px;
     line-height: 26px;
-    padding: 0px 50px 35px;
+    padding: 0 50px 35px;
     max-width: 968px;
   }
 
@@ -175,12 +174,12 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     max-width: 238px;
-    border-radius: 0 0 30px 0;
+    border-radius: 0 0 30px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 249px;
-    padding: 10px 0 0 0;
+    padding: 10px 0 0;
   }
 
   &::before {
@@ -327,7 +326,7 @@
   }
 }
 
-.hero .hero-swiper .hero-slide__swiper-pagination {
+.hero .hero-swiper .hero-swiper__swiper-pagination {
   padding: 3px 10px;
   display: flex;
   align-items: center;
@@ -346,6 +345,7 @@
     left: 45px;
     border-radius: 20px 20px 0 0;
   }
+
   @media (min-width: $desktop-width) {
     left: 100px;
   }
@@ -374,13 +374,14 @@
   }
 }
 
-.hero-slide__swiper-pagination .swiper-pagination-bullet {
+.hero-swiper__swiper-pagination .swiper-pagination-bullet {
   border: 2px solid $button-clicked;
   background-color: #ffffff;
   opacity: 1;
   width: 8px;
   height: 8px;
   z-index: 100;
+
   --swiper-pagination-bullet-horizontal-gap: 6px;
 
   @media (min-width: $tablet-width) {
@@ -389,7 +390,7 @@
   }
 }
 
-.hero-slide__swiper-pagination .swiper-pagination-bullet-active {
+.hero-swiper__swiper-pagination .swiper-pagination-bullet-active {
   background-color: $button-clicked;
 }
 

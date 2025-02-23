@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   max-width: 100%;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .modal-dropdown__button {
@@ -12,7 +12,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  color: #F0EFE9;
+  color: #f0efe9;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -53,7 +53,7 @@
   overflow: hidden;
 }
 
-.modal-dropdown--open  .modal-dropdown__list {
+.modal-dropdown--open .modal-dropdown__list {
   display: block;
   margin-top: 5px;
   color: $main-text-color;

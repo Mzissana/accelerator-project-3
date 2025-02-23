@@ -16,16 +16,16 @@
   @media (min-width: $tablet-width) {
     width: 768px;
     padding: 50px 45px;
-    gap:  39px 40px;
+    gap: 39px 40px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1440px;
     padding: 70px 100px 60px;
     display: grid;
-    grid-template-areas: "heading goal"
-    "features features"
-    ;
+    grid-template-areas:
+      "heading  goal"
+      "features features";
   }
 }
 

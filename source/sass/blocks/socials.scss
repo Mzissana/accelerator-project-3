@@ -39,21 +39,23 @@
   }
 
   &:hover {
-    &:before {
+    &::before {
       opacity: 0.7;
     }
   }
 
   &:focus {
     background-color: $icon-additional;
-    &:before {
+
+    &::before {
       background-color: $icon-main;
     }
   }
 
   &:active {
     background-color: $button-clicked;
-    &:before {
+
+    &::before {
       background-color: $icon-additional;
       opacity: 1;
     }
@@ -63,7 +65,7 @@
 .socials__icon--vkontakte {
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -88,7 +90,7 @@
 .socials__icon--ok {
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -113,7 +115,7 @@
 .socials__icon--reddit {
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -127,6 +129,7 @@
     mask-image: url("../../img/sprite/reddit-icon.svg");
     mask-repeat: no-repeat;
     mask-size: contain;
+
     @media (min-width: $tablet-width) {
       width: 17px;
       height: 16px;

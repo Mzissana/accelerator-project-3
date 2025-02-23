@@ -26,8 +26,9 @@
     width: 1440px;
     padding: 120px 100px;
     display: grid;
-    grid-template-areas: "heading grant"
-    "picture grant";
+    grid-template-areas:
+      "heading grant"
+      "picture grant";
     gap: 40px 32px;
     align-items: start;
     grid-template-rows: min-content 1fr;
@@ -98,5 +99,4 @@
 
 .grant__requirements {
   grid-area: grant;
-
 }
