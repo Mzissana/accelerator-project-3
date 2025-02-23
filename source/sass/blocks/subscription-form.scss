@@ -1,7 +1,7 @@
 .subscription-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .subscription-form__label {
@@ -33,6 +33,7 @@
   border: 1px solid rgb(255, 255, 255, 0.3);
   min-height: 50px;
   padding: 16px 25px;
+  margin-bottom: 8px;
 }
 
 .subscription-form__input--text-area {
@@ -72,7 +73,6 @@
   display: block;
 }
 
-
 .subscription-form__checkbox {
   display: flex;
   flex-wrap: wrap;
@@ -81,6 +81,7 @@
   padding: 0 0 0 30px;
   opacity: 0.9;
   position: relative;
+  margin-bottom: 8px;
 
   @media (min-width: $tablet-width) {
     padding-top: 3px;
