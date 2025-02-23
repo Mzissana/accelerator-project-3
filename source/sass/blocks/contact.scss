@@ -23,32 +23,3 @@
     line-height: 26px;
   }
 }
-
-
-.contact__subtitle:hover {
-  color: rgba(2, 102, 193, 0.102);
-  &::after {
-    background-color: rgba(2, 102, 193, 0.102);
-  }
-}
-
-
-.contact__subtitle:focus {
-  color: #0266c1;
-  &::after {
-    background-color: #0266c1;
-  }
-}
-
-.contact__subtitle:active {
-  color: #1c3374;
-  &::after {
-    background-color: #1c3374;
-  }
-}
-.contact__subtitle:active {
-  color: #999999;
-  &::after {
-    background-color: #999999;
-  }
-}

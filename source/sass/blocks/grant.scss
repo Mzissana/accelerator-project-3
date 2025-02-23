@@ -19,6 +19,7 @@
     width: 768px;
     padding: 100px 45px;
     gap: 40px;
+    align-items: flex-start;
   }
 
   @media (min-width: $desktop-width) {

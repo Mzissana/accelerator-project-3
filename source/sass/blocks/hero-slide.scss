@@ -49,8 +49,8 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-areas:
-    "header header"
-    "paragraph button";
+      "header header"
+      "paragraph button";
     max-width: 659px;
     grid-template-columns: 355px auto;
   }
@@ -59,8 +59,6 @@
     max-width: 968px;
     grid-template-columns: 526px auto;
   }
-
-
 }
 
 .hero-slide__header {
@@ -82,7 +80,6 @@
     padding: 31px 40px 23px;
     grid-area: header;
     border-radius: 0 30px 30px 0;
-
   }
 
   @media (min-width: $desktop-width) {
@@ -90,6 +87,28 @@
     line-height: 62px;
     padding: 40px 50px 30px;
     max-width: 968px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    mask-image: url("/__spritemap#sprite-angle-icon-view");
+    transform: rotate(90deg);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -18px;
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 
@@ -104,7 +123,6 @@
   font-weight: 400;
   margin: 0;
   position: relative;
-
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -121,6 +139,30 @@
     padding: 0px 50px 35px;
     max-width: 968px;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    mask-image: url("/__spritemap#sprite-angle-icon-view");
+    transform: rotate(90deg);
+
+    @media (min-width: $tablet-width) {
+      right: -26px;
+      width: 26px;
+      height: 26px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -18px;
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 .hero-slide__button-wrapper {
@@ -128,6 +170,7 @@
   max-width: 184px;
   background-color: $background-extra;
   border-radius: 0 0 14px 14px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -138,6 +181,30 @@
   @media (min-width: $desktop-width) {
     max-width: 249px;
     padding: 10px 0 0 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    mask-image: url("/__spritemap#sprite-angle-icon-view");
+    transform: rotate(90deg);
+
+    @media (min-width: $tablet-width) {
+      right: -26px;
+      width: 26px;
+      height: 26px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -18px;
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 
@@ -186,7 +253,13 @@
     mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
     border-radius: 50%;
     translate: 0 -50%;
-    rotate: -30deg;
+    rotate: -45deg;
+
+    @media (min-width: $tablet-width) {
+      right: 21px;
+      width: 10px;
+      height: 10px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -215,13 +288,13 @@
 
   &::after {
     background-color: $background-accent;
-    transform: rotate(30deg);
+    transform: rotate(45deg);
   }
 }
 
 .hero-slide__button:focus {
   &::after {
-    transform: rotate(30deg);
+    transform: rotate(45deg);
   }
 }
 
@@ -235,7 +308,7 @@
 
   &::after {
     background-color: $background-accent;
-    transform: rotate(30deg);
+    transform: rotate(45deg);
     opacity: 0.7;
   }
 }
@@ -253,8 +326,6 @@
     opacity: 0.6;
   }
 }
-
-
 
 .hero .hero-swiper .hero-slide__swiper-pagination {
   padding: 3px 10px;
@@ -277,6 +348,29 @@
   }
   @media (min-width: $desktop-width) {
     left: 100px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    mask-image: url("/__spritemap#sprite-angle-icon-view");
+
+    @media (min-width: $tablet-width) {
+      right: -26px;
+      width: 26px;
+      height: 26px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -18px;
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 

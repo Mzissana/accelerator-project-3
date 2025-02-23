@@ -18,7 +18,7 @@
     "heading heading"
     "slider slider"
     "navigation buttons";
-    padding: 50px 45px 56px;
+    padding: 50px 45px;
     gap: 43px 30px;
     width: 768px;
     position: relative;
@@ -26,7 +26,7 @@
 
   @media (min-width: $desktop-width) {
     gap: 45px;
-    padding: 62px 100px 64px;
+    padding: 62px 100px 58px;
     width: 1440px;
     position: relative;
   }
@@ -118,14 +118,20 @@
     content: "";
     position: absolute;
     top: 50%;
-    right: 17px;
+    right: 16px;
     width: 10px;
     height: 10px;
     background-color: #ffffff;
     mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
     border-radius: 50%;
     translate: 0 -50%;
-    rotate: -30deg;
+    rotate: -45deg;
+
+    @media (min-width: $tablet-width) {
+      right: 21px;
+      width: 10px;
+      height: 10px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -142,6 +148,7 @@
 
   @media (min-width: $desktop-width) {
     right: 100px;
+    top: 62px;
   }
 }
 
@@ -156,13 +163,13 @@
 
   &::after {
     background-color: $background-accent;
-    transform: rotate(30deg);
+    transform: rotate(45deg);
   }
 }
 
 .programs__button:focus {
   &::after {
-    transform: rotate(30deg);
+    transform: rotate(45deg);
   }
 }
 
@@ -176,7 +183,7 @@
 
   &::after {
     background-color: $background-accent;
-    transform: rotate(30deg);
+    transform: rotate(45deg);
     opacity: 0.7;
   }
 }
@@ -216,7 +223,7 @@
 
 .programs .programs-swiper-container__button {
 width: 37px;
-height: 35px;
+height: 20px;
 left: 4px;
 display: flex;
 justify-content: center;
@@ -225,8 +232,8 @@ align-items: center;
 
 
 .programs .programs-swiper-container__button--next {
-width: 37px;
-height: 35px;
+width: 28px;
+height: 41px;
 position: relative;
 
 &::after {
@@ -245,8 +252,8 @@ position: absolute;
 
 
 .programs .programs-swiper-container__button--prev {
-width: 37px;
-height: 35px;
+width: 28px;
+height: 41px;
 position: relative;
 
 &::after {
@@ -311,7 +318,6 @@ position: relative;
     display: block;
     grid-area: navigation;
   }
-
 }
 
 .programs__wrapper .programs__scrollbar {

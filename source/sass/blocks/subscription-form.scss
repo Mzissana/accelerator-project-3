@@ -27,13 +27,17 @@
 
 .subscription-form__input {
   background-color: transparent;
+  color: inherit;
+  font-size: inherit;
   border-radius: 8px;
   border: 1px solid rgb(255, 255, 255, 0.3);
   min-height: 50px;
+  padding: 16px 25px;
 }
 
 .subscription-form__input--text-area {
   min-height: 94px;
+  resize: none;
 
   @media (min-width: $tablet-width) {
     min-height: 88px;
@@ -51,6 +55,7 @@
   @media (min-width: $tablet-width) {
     width: 100%;
   }
+
 }
 
 .subscription-form__label--city {
@@ -58,7 +63,6 @@
     line-height: 14px;
   }
 }
-
 .subscription-form__checkbox {
   display: flex;
   flex-wrap: wrap;
@@ -68,48 +72,123 @@
   opacity: 0.9;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background-color: $background-extra;
-    translate: 0 -50%;
-    border-radius: 2px;
-
-    @media (min-width: $tablet-width) {
-      top: 24%;
-    }
-  }
-
   @media (min-width: $tablet-width) {
+    padding-top: 3px;
     max-width: 100%;
     min-height: 40px;
-    padding: 0 0 0 30px;
     flex-wrap: nowrap;
     align-items: flex-start;
-    padding: 4px 0 0 30px;
+    padding-left: 30px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 3px;
     font-size: 12px;
     line-height: 12px;
-    padding: 5px 0 0 30px;
+    padding-left: 30px;
   }
 }
 
-.subscription-form__check span {
+.subscription-form__checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.subscription-form__checkbox-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: $background-extra;
+  outline: 1px solid rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+
+
+  @media (min-width: $tablet-width) {
+    top: 25%;
+  }
+
+}
+
+.subscription-form__checkbox-mark::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  mask-image: url("/__spritemap#sprite-tick-icon-view");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.subscription-form__checkbox-input:checked + .subscription-form__checkbox-mark {
+  background-color: $background-extra;
+  outline: none;
+
+  &:hover {
+    background-color: $background-accent;
+  }
+}
+
+.subscription-form__checkbox-input:checked + .subscription-form__checkbox-mark::before {
+  background-color: $background-accent;
+  opacity: 1;
+}
+
+.subscription-form__checkbox-input:checked:hover + .subscription-form__checkbox-mark::before {
+  background-color: $background-extra;
+  opacity: 1;
+}
+
+.subscription-form__checkbox:hover .subscription-form__checkbox-mark {
+  outline: 1px solid white;
+}
+
+.subscription-form__checkbox-input:focus-visible + .subscription-form__checkbox-mark {
+  outline: 1px solid white;
+}
+
+.subscription-form__checkbox-input:disabled + .subscription-form__checkbox-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+  outline-color: rgba(255, 255, 255);
+  cursor: not-allowed;
+}
+
+.subscription-form__checkbox-input:checked:disabled + .subscription-form__checkbox-mark {
+  background-color: $disabled;
+  outline: none;
+}
+
+.subscription-form__checkbox-input:checked:disabled + .subscription-form__checkbox-mark::before {
+  background-color: $background-extra;
+}
+
+.subscription-form__checkbox-input:disabled + .subscription-form__checkbox-mark::before {
+  opacity: 0.3;
+}
+
+.subscription-form__input--error {
+  border-color: #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
+}
+
+.subscription-form__checkbox span {
   display: block;
 }
-
-.subscription-form__checkbox input {
- position: absolute;
- left: 10px;
- bottom: 15px;
-}
-
 
 .subscription-form__button {
   width: 260px;
@@ -152,7 +231,14 @@
     mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
     border-radius: 50%;
     translate: 0 -50%;
-    rotate: -30deg;
+    rotate: -45deg;
+
+
+  @media (min-width: $tablet-width) {
+    right: 21px;
+    width: 10px;
+    height: 10px;
+  }
   }
 
   @media (min-width: $tablet-width) {
@@ -180,13 +266,13 @@
 
   &::after {
     background-color: $background-extra;
-    transform: rotate(30deg);
+    transform: rotate(45deg);
   }
 }
 
 .subscription-form__button:focus {
   &::after {
-    transform: rotate(30deg);
+    transform: rotate(45deg);
   }
 }
 
@@ -200,7 +286,7 @@
 
   &::after {
     background-color: $background-extra;
-    transform: rotate(30deg);
+    transform: rotate(45deg);
     opacity: 0.7;
   }
 }
@@ -217,4 +303,21 @@
   &::after {
     opacity: 0.6;
   }
+}
+
+
+.subscription-form__input:hover,
+.subscription-form__input:focus {
+  border-color: $on-dark-text-color;
+}
+
+.subscription-form__input:disabled {
+  border-color:  rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+}
+
+.subscription-form__input--error {
+  border-color: #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
 }

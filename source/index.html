@@ -659,7 +659,7 @@
 
             <li class="faq-accordion__item">
               <button type="button">
-                Признаётся ли учёба в&nbsp;рамках проекта для&nbsp;дальнейшего
+                Признаётся ли учёба в&nbsp;рамках проекта <br> для дальнейшего
                 обучения?
               </button>
               <div>
@@ -954,24 +954,31 @@
 
             <label class="subscription-form__label">
               Ваше сообщение
-              <textarea class="subscription-form__input subscription-form__input--text-area" name="message" rows="4"
+              <textarea class="subscription-form__input subscription-form__input--text-area" name="message" rows="3"
                 required></textarea>
             </label>
 
-            <label class="subscription-form__label subscription-form__label--city">
+            <label class="subscription-form__label subscription-form__label--city" for="subscription-dropdown">
               Выберите город
-              <select class="subscription-form__input subscription-form__input--city" name="city" required>
-                <option value="" disabled selected></option>
-                <option value="moscow">Москва</option>
-                <option value="spb">Санкт-Петербург</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="ekaterinburg">Екатеринбург</option>
-              </select>
+              <div class="subscription-form__input subscription-form__input--city subscription-dropdown" name="city">
+                <button class="subscription-dropdown__button" aria-haspopup="listbox">
+                  <span class="visually-hidden">Выберите город</span>
+                </button>
+                <ul class="subscription-dropdown__list" role="listbox">
+                  <li class="subscription-dropdown__item" role="option" data-value="" tabindex="0"></li>
+                  <li class="subscription-dropdown__item" role="option" data-value="moscow" tabindex="0">Москва</li>
+                  <li class="subscription-dropdown__item" role="option" data-value="spb" tabindex="0">Санкт-Петербург</li>
+                  <li class="subscription-dropdown__item" role="option" data-value="novosibirsk" tabindex="0">Новосибирск</li>
+                  <li class="subscription-dropdown__item" role="option" data-value="ekaterinburg" tabindex="0">Екатеринбург</li>
+                </ul>
+                </div>
             </label>
 
 
+
             <label class="subscription-form__checkbox">
-              <input class="visually-hidden" type="checkbox" name="consent" required />
+              <input class="subscription-form__checkbox-input" type="checkbox" name="consent" required />
+              <span class="subscription-form__checkbox-mark"></span>
               Я согласен на обработку моих персональных&nbsp; <span>данных</span>
             </label>
 
@@ -1092,20 +1099,25 @@
               data-placeholder="+7 (000)-000-00-00" required />
           </label>
 
-          <label class="modal-form__label modal-form__label--city">
+          <label class="modal-form__label" for="modal-dropdown">
             Выберите город
-            <select class="modal-form__input modal-form__input--city" name="city" required>
-              <option value="" disabled selected></option>
-              <option value="moscow">Москва</option>
-              <option value="spb">Санкт-Петербург</option>
-              <option value="novosibirsk">Новосибирск</option>
-              <option value="ekaterinburg">Екатеринбург</option>
-            </select>
           </label>
-
+          <div class="modal-form__input modal-dropdown" name="city">
+            <button class="modal-dropdown__button" aria-haspopup="listbox">
+              <span class="visually-hidden">Выберите город</span>
+            </button>
+            <ul class="modal-dropdown__list" role="listbox">
+              <li class="modal-dropdown__item" role="option" data-value="" tabindex="0"></li>
+              <li class="modal-dropdown__item" role="option" data-value="moscow" tabindex="0">Москва</li>
+              <li class="modal-dropdown__item" role="option" data-value="spb" tabindex="0">Санкт-Петербург</li>
+              <li class="modal-dropdown__item" role="option" data-value="novosibirsk" tabindex="0">Новосибирск</li>
+              <li class="modal-dropdown__item" role="option" data-value="ekaterinburg" tabindex="0">Екатеринбург</li>
+            </ul>
+            </div>
 
           <label class="modal-form__checkbox">
             <input type="checkbox" name="consent" required />
+            <span class="modal-form__checkbox-mark"></span>
             Я согласен на обработку моих персональных&nbsp; <span>данных</span>
           </label>
 

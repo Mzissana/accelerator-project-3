@@ -27,6 +27,7 @@ function initHeroSwiper() {
     pagination: {
       el: '.hero-slide__swiper-pagination',
       clickable: true,
+      renderBullet: (index, className) => `<button type="button" class="${className}" tabindex="0" aria-label="Go to slide ${index + 1}"></button>`,
     },
     allowTouchMove: currentDevice !== 'desktop',
     watchOverflow: true,
@@ -45,7 +46,6 @@ function initHeroSwiper() {
     }
     updateBottomSpacing();
   });
-
   window.addEventListener('load', updateBottomSpacing);
 }
 

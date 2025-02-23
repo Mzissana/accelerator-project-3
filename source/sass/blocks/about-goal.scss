@@ -88,13 +88,19 @@
     position: absolute;
     top: 50%;
     right: 15px;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background-color: #ffffff;
     mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
     border-radius: 50%;
     translate: 0 -50%;
-    rotate: -30deg;
+    rotate: -45deg;
+
+    @media (min-width: $tablet-width) {
+      right: 21px;
+      width: 10px;
+      height: 10px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -108,7 +114,7 @@
 }
 
 .about-goal__link {
-  padding: 15px 50px 15px 29px;
+  padding: 15px 50px 15px 12px;
 
   @media (min-width: $tablet-width) {
     padding: 20px 79px 20px 29px;
@@ -125,13 +131,13 @@
 
   &::after {
     background-color: $background-accent;
-    transform: rotate(30deg);
+    transform: rotate(45deg);
   }
 }
 
 .about-goal__button:focus {
   &::after {
-    transform: rotate(30deg);
+    transform: rotate(45deg);
   }
 }
 
@@ -145,7 +151,7 @@
 
   &::after {
     background-color: $background-accent;
-    transform: rotate(30deg);
+    transform: rotate(45deg);
     opacity: 0.7;
   }
 }

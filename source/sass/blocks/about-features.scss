@@ -69,8 +69,8 @@
   position: absolute;
   top: -5px;
   left: -10px;
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 26px;
   background-color: $background-accent;
   color: #ffffff;
   font-size: 14px;
@@ -84,13 +84,14 @@
 .about-features__item::after {
   content: "";
   position: absolute;
-  top: -5px;
-  left: -10px;
-  width: 24px;
-  height: 24px;
+  top: -12px;
+  left: -8px;
+  width: 20px;
+  height: 20px;
   background-color: #ffffff;
   mask-image: url("/__spritemap#sprite-star-icon-view");
   color: #ffffff;
+  mask-repeat: no-repeat;
 }
 
 

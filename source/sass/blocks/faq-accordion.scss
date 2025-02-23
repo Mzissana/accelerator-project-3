@@ -54,7 +54,6 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-image: url("__spritemap#sprite-plus-icon-view");
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-color: $background-accent;
@@ -62,6 +61,31 @@
     right: 15px;
     top: 50%;
     translate: 0 -50%;
+
+    @media (min-width: $tablet-width) {
+      right: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 40px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    mask-image: url("/__spritemap#sprite-plus-icon-view");
+    mask-size: 18px 18px;
+    background-size: 40px 40px;
+    mask-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-color: $background-extra;
+    mask-position: 11px 10px;
+    right: 15px;
+    top: 50%;
+    translate: (0 -50%);
 
     @media (min-width: $tablet-width) {
       right: 30px;
@@ -90,8 +114,19 @@
   border: none;
 }
 
+.faq-accordion__item button br {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
 .faq-accordion__item:nth-child(4) button{
-  padding: 20px 60px 20px 15px;
+  padding: 20px 50px 20px 15px;
 
   @media (min-width: $tablet-width) {
     padding: 30px 75px 30px 30px;
@@ -102,21 +137,15 @@
   }
 }
 
-.faq-accordion__item:nth-child(5) button{
+.faq-accordion__item:nth-child(5) button {
   padding: 20px 60px 20px 15px;
 
   @media (min-width: $tablet-width) {
     padding: 30px 75px 30px 30px;
-    &::before {
-      top: 45%;
-    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 40px;
-    &::before {
-      top: 31%;
-    }
   }
 }
 
@@ -149,15 +178,14 @@
   }
 
   &::before {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-image: url("__spritemap#sprite-minus-icon-view");
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-color: #ffffff;
+    background-color: $background-extra;
+  }
+
+  &::after {
+    mask-image: url("/__spritemap#sprite-minus-icon-view");
+    mask-size: 18px 2px;
+    mask-position: 11px 19px;
+    background-color: $background-accent;
   }
 }
 
@@ -203,6 +231,10 @@
       outline: 1px solid $background-accent;
       outline-offset: -1px;
     }
+
+    &::after {
+      background-color: $background-accent;
+    }
   }
 
   &:focus {
@@ -211,6 +243,10 @@
       background-color: transparent;
       outline: 1px solid $background-accent;
       outline-offset: -1px;
+    }
+
+    &::after {
+      background-color: $background-accent;
     }
   }
 }
@@ -222,10 +258,31 @@
       outline: 1px solid $background-extra;
       outline-offset: -1px;
     }
+
+    &::after {
+      background-color: $background-extra;
+    }
+}
+
+.faq-accordion__item--show > button:hover,
+.faq-accordion__item--show > button:focus {
+    background-color: $background-accent;
+
+  &::before {
+    background-color: $background-accent;
+  }
+
+  &::after {
+    background-color: $background-extra;
+  }
 }
 
 .faq-accordion__item--show:active > button {
     &::before {
+      background-color: $background-accent;
+    }
+
+    &::after {
       background-color: $background-extra;
     }
 }
@@ -233,16 +290,24 @@
 .faq-accordion .faq-accordion__item--active div,
 .faq-accordion .faq-accordion__item--active button {
   background-color: $button-clicked;
-}
-
-
-.faq-accordion__item--show > button:hover,
-.faq-accordion__item--show > button:focus {
-    background-color: $button-clicked;
 
   &::before {
-    background-color: transparent;
-    outline: 1px solid $background-extra;
-    outline-offset: -1px;
+    background-color: $background-extra;
+  }
+
+  &::after {
+    background-color: $background-accent;
   }
 }
+
+.faq-accordion__item--active:active > button {
+  &::before {
+    background-color: $background-accent;
+  }
+
+  &::after {
+    background-color: $background-extra;
+  }
+}
+
+

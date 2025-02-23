@@ -21,12 +21,12 @@ function openMenu() {
 
 function handleResize() {
   if (menu.classList.contains('navigation-menu--open')) {
-    logo.style.display = isMobile() ? 'none' : 'block';
+    logo.style.display = isMobile() ? 'none' : 'flex';
   }
 }
 
 function closeMenu() {
-  logo.style.display = 'block';
+  logo.style.display = 'flex';
   document.body.classList.remove('page-body--overlay');
   menu.classList.remove('navigation-menu--open');
   menu.classList.add('navigation-menu--closed');

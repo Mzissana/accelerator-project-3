@@ -18,14 +18,14 @@
   "heading heading"
   "slider slider"
   "navigation buttons";
-    padding: 50px 45px 59px;
+    padding: 50px 45px 53px;
     gap: 40px;
     width: 768px;
   }
 
   @media (min-width: $desktop-width) {
     gap: 44px;
-    padding: 66px 100px 66px;
+    padding: 66px 100px 60px;
     width: 1440px;
   }
 }
@@ -138,17 +138,17 @@
 
 .reviews .reviews-swiper-container__button {
   width: 37px;
-  height: 35px;
-  left: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+height: 20px;
+left: 4px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 
 .reviews .reviews-swiper-container__button--next {
-  width: 37px;
-  height: 35px;
+  width: 28px;
+height: 41px;
   position: relative;
 
   &::after {
@@ -167,8 +167,8 @@
 
 
 .reviews .reviews-swiper-container__button--prev {
-  width: 37px;
-  height: 35px;
+  width: 28px;
+  height: 41px;
   position: relative;
 
   &::after {
