@@ -10,7 +10,6 @@ import initModalFormValidation from './scripts/validate-modal-form.js';
 import initCustomDropdown from './scripts/initialize-custom-dropdown.js';
 import initModalDropdown from './scripts/initialize-modal-dropdown.js';
 
-//slider
 document.addEventListener('DOMContentLoaded', initProgramsSwiper);
 document.addEventListener('DOMContentLoaded', initReviewsSwiper);
 document.addEventListener('DOMContentLoaded', initNewsSwiper);

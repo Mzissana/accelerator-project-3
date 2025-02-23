@@ -1,10 +1,14 @@
-const initFormValidation = () => {
+const initModalValidation = () => {
   const form = document.querySelector('.modal__form');
 
   form.setAttribute('novalidate', '');
 
-  const inputs = form.querySelectorAll('.modal-form__input');
   const phoneInput = form.querySelector('input[name="phone"]');
+  const consentCheckbox = form.querySelector('input[name="consent"]');
+  const cityInput = form.querySelector('input[name="city"]');
+  const cityDropdown = form.querySelector('.modal-form__input--city');
+  const cityButton = cityDropdown.querySelector('.modal-dropdown__button');
+  const cityItems = cityDropdown.querySelectorAll('.modal-dropdown__item');
 
   const maskPhone = (input) => {
     input.addEventListener('input', () => {
@@ -25,34 +29,46 @@ const initFormValidation = () => {
   if (phoneInput) {
     maskPhone(phoneInput);
   }
+
   const validateInput = (input) => {
-    if (!input.checkValidity()) {
-      input.classList.add('modal-form__input--error');
-    } else {
-      input.classList.remove('modal-form__input--error');
-    }
+    input.classList.toggle('modal-form__input--error', !input.checkValidity());
   };
 
+  const validateCheckbox = (checkbox) => {
+    checkbox.classList.toggle('modal-form__checkbox--error', !checkbox.checked);
+  };
+
+  const validateCity = () => {
+    const isCityValid = !!cityInput.value.trim();
+    cityDropdown.classList.toggle('modal-form__input--error', !isCityValid);
+  };
+
+  cityItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      cityInput.value = item.getAttribute('data-value');
+      cityButton.textContent = item.textContent;
+      validateCity();
+    });
+  });
+
   form.addEventListener('input', (event) => {
-    if (event.target.classList.contains('modal-form__input')) {
-      validateInput(event.target);
+    if (event.target === phoneInput) {
+      validateInput(phoneInput);
+    }
+    if (event.target === consentCheckbox) {
+      validateCheckbox(consentCheckbox);
     }
   });
 
   form.addEventListener('submit', (event) => {
-    let isValid = true;
+    validateInput(phoneInput);
+    validateCheckbox(consentCheckbox);
+    validateCity();
 
-    inputs.forEach((input) => {
-      validateInput(input);
-      if (!input.checkValidity()) {
-        isValid = false;
-      }
-    });
-
-    if (!isValid) {
+    if (!form.checkValidity() || !cityInput.value.trim()) {
       event.preventDefault();
     }
   });
 };
 
-export default initFormValidation;
+export default initModalValidation;
