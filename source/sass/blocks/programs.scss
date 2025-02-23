@@ -234,6 +234,21 @@
   height: 41px;
   position: relative;
 
+  &::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    z-index: 10;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    right: 6px;
+    translate: (0 -50%);
+  }
+
   &::after {
     content: "";
     width: 13px;
@@ -253,6 +268,21 @@
   height: 41px;
   position: relative;
 
+  &::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    z-index: 10;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    translate: (0 -50%);
+  }
+
   &::after {
     content: "";
     width: 13px;
@@ -268,9 +298,12 @@
 }
 
 .programs .programs-swiper-container__button:hover {
-  background-color: transparent;
-  border: none;
-  outline: none;
+
+  &::before {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
 
   &::after {
     background-color: $background-accent;
@@ -279,8 +312,11 @@
 }
 
 .programs .programs-swiper-container__button:focus {
-  background-color: $background-extra;
-  border-radius: 50%;
+  &::before {
+    background-color: $background-extra;
+    border: none;
+    outline: none;
+  }
 
   &::after {
     background-color: $background-accent;
@@ -288,8 +324,11 @@
 }
 
 .programs .programs-swiper-container__button:active {
-  background-color: $background-extra;
-  border-radius: 50%;
+  &::before {
+    background-color: $background-extra;
+    border: none;
+    outline: none;
+  }
 
   &::after {
     background-color: $background-accent;

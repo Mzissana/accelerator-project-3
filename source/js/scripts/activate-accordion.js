@@ -4,16 +4,16 @@ function activateFAQAccordion() {
   accordionItems.forEach((item) => {
     const button = item.querySelector('button');
     const content = item.querySelector('div');
-
-    if (item.classList.contains('faq-accordion__item--show')) {
-      content.style.maxHeight = `${content.scrollHeight }px`;
-    }
+    window.addEventListener('resize', () => {
+      if (item.classList.contains('faq-accordion__item--show')) {
+        content.style.maxHeight = `${content.scrollHeight + 5}px`;
+      }
+    });
 
     button.addEventListener('click', () => {
       const isOpen = item.classList.contains('faq-accordion__item--show');
 
       if (isOpen) {
-        // Закрываем, если уже открыт
         item.classList.remove('faq-accordion__item--show');
         item.classList.remove('faq-accordion__item--active');
         content.style.maxHeight = null;

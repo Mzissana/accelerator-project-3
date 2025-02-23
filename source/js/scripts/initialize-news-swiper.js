@@ -116,43 +116,35 @@ function getCurrentDevice() {
   }
 }
 
-let originalSlideOrder = []; // To store the original order of slides
+let originalSlideOrder = [];
 
 function reorderSlides() {
   const slides = document.querySelectorAll('.news-swiper__slide');
-  const swiperWrapper = slides[0].parentNode; // Get the parent element (the wrapper of the slides)
+  const swiperWrapper = slides[0].parentNode;
 
-  // Track the original order on the first load or if the page is resized back to its original state
   if (originalSlideOrder.length === 0) {
-    originalSlideOrder = Array.from(slides); // Store the original order of slides
+    originalSlideOrder = Array.from(slides);
   }
 
   const currentDevice = getCurrentDevice();
 
-  // Reset to the original order if we are not on tablet
   if (currentDevice !== 'tablet') {
     originalSlideOrder.forEach((slide) => {
-      swiperWrapper.appendChild(slide); // Re-attach the slides to the wrapper in their original order
+      swiperWrapper.appendChild(slide);
     });
   }
 
-  // Swap slides only when the device is tablet
   if (currentDevice === 'tablet') {
-    // If it's a tablet, first reset to the original order
     originalSlideOrder.forEach((slide) => {
-      swiperWrapper.appendChild(slide); // Re-attach slides to the original order
+      swiperWrapper.appendChild(slide);
     });
 
-    // Now swap slides 2 and 3 (index 1 and 2)
-    const slide2 = slides[1]; // 2nd slide
-    const slide3 = slides[2]; // 3rd slide
+    const slide2 = slides[1];
+    const slide3 = slides[2];
 
-    // Swap the DOM elements
-    swiperWrapper.insertBefore(slide3, slide2); // Move slide3 before slide2
+    swiperWrapper.insertBefore(slide3, slide2);
   }
 }
-
-
 
 function getSlidesPerView(device) {
   switch (device) {

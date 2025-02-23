@@ -34,8 +34,6 @@ function closeMenu() {
   menuToggle.classList.remove('active');
   document.removeEventListener('click', handleOutsideClick);
   window.removeEventListener('resize', handleResize);
-
-  // Убираем активные классы со всех пунктов меню
   document.querySelectorAll('.navigation-menu__link--active').forEach((link) => {
     link.classList.remove('navigation-menu__link--active');
   });
@@ -73,10 +71,8 @@ function activateMenu() {
         event.preventDefault();
         const isOpen = !subMenu.classList.contains('navigation-menu__list--closed');
 
-        // Переключаем состояние подменю
         subMenu.classList.toggle('navigation-menu__list--closed');
 
-        // Добавляем или убираем активный класс у ссылки
         if (isOpen) {
           link.classList.remove('navigation-menu__link--active');
         } else {

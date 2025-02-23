@@ -78,6 +78,10 @@
   min-height: 48px;
   opacity: 100%;
 
+  &:hover {
+    color: $extra-text-color;
+  }
+
   &:active {
     background-color: $background-accent;
     color: $on-dark-text-color;
@@ -86,10 +90,6 @@
   &:focus {
     background-color: $background-accent;
     color: $on-dark-text-color;
-  }
-
-  &:hover {
-    color: $extra-text-color;
   }
 }
 
