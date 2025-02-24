@@ -110,7 +110,6 @@
   border-radius: 2px;
 }
 
-
 .reviews .reviews-swiper-container__buttons {
   display: flex;
   flex-direction: row;
@@ -137,7 +136,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 .reviews .reviews-swiper-container__button--next {
   width: 28px;
@@ -172,7 +170,6 @@
   }
 }
 
-
 .reviews .reviews-swiper-container__button--prev {
   width: 28px;
   height: 41px;
@@ -206,7 +203,6 @@
     position: absolute;
   }
 }
-
 
 .reviews .reviews-swiper-container__button:hover {
   &::before {
