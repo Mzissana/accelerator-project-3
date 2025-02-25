@@ -247,7 +247,7 @@
     width: 16px;
     height: 16px;
     background-color: $background-main;
-    mask-image: url("/__spritemap#sprite-angle-icon-view");
+    mask-image: url("../__spritemap#sprite-angle-icon-view");
     mask-repeat: no-repeat;
   }
 
@@ -259,7 +259,7 @@
     width: 16px;
     height: 16px;
     background-color: $background-main;
-    mask-image: url("/__spritemap#sprite-angle-icon-view");
+    mask-image: url("../__spritemap#sprite-angle-icon-view");
     mask-repeat: no-repeat;
   }
 }
@@ -299,7 +299,7 @@
     width: 16px;
     height: 16px;
     background-color: $background-main;
-    mask-image: url("/__spritemap#sprite-angle-icon-view");
+    mask-image: url("../__spritemap#sprite-angle-icon-view");
   }
 }
 
@@ -353,7 +353,7 @@
     width: 10px;
     height: 10px;
     background-color: #ffffff;
-    mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
+    mask-image: url("../__spritemap#sprite-pagination-arrow-icon-view");
     mask-repeat: no-repeat;
     border-radius: 50%;
     translate: 0 -50%;
@@ -418,7 +418,7 @@
     width: 16px;
     height: 16px;
     background-color: $background-main;
-    mask-image: url("/__spritemap#sprite-angle-icon-view");
+    mask-image: url("../__spritemap#sprite-angle-icon-view");
 
     @media (min-width: $tablet-width) {
       right: 69px;

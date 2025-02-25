@@ -123,7 +123,7 @@
     content: "";
     width: 13px;
     height: 9px;
-    mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
+    mask-image: url("../__spritemap#sprite-pagination-arrow-icon-view");
     background-color: $background-accent;
     background-repeat: no-repeat;
     mask-repeat: no-repeat;
@@ -157,7 +157,7 @@
     width: 13px;
     height: 9px;
     transform: rotate(180deg);
-    mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
+    mask-image: url("../__spritemap#sprite-pagination-arrow-icon-view");
     background-color: $background-accent;
     background-repeat: no-repeat;
     mask-repeat: no-repeat;

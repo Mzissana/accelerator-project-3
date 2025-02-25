@@ -145,7 +145,7 @@
     width: 12px;
     height: 12px;
     background-color: $background-extra;
-    mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
+    mask-image: url("../__spritemap#sprite-pagination-arrow-icon-view");
     border-radius: 50%;
     translate: 0 -50%;
     rotate: -30deg;
@@ -248,7 +248,7 @@
   width: 12px;
   height: 12px;
   background-color: $background-extra;
-  mask-image: url("/__spritemap#sprite-tick-icon-view");
+  mask-image: url("../__spritemap#sprite-tick-icon-view");
   mask-repeat: no-repeat;
   mask-size: contain;
   mask-position: center;

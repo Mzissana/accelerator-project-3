@@ -56,7 +56,7 @@
 
   &::after {
     background-color: $background-accent;
-    mask-image: url("/__spritemap#sprite-menu-close-icon-view");
+    mask-image: url("../__spritemap#sprite-menu-close-icon-view");
     background-repeat: no-repeat;
     right: 16px;
     width: 18px;
@@ -103,7 +103,7 @@
     height: 8px;
     background-color: #ffffff;
     background-repeat: repeat-y;
-    mask-image: url("/__spritemap#sprite-menu-open-icon-view");
+    mask-image: url("../__spritemap#sprite-menu-open-icon-view");
     translate: 0 -50%;
     transition: transform 0.3s ease;
     mask-repeat: no-repeat;
@@ -191,7 +191,7 @@
     width: 12px;
     height: 5px;
     background-color: #ffffff;
-    mask-image: url("/__spritemap#sprite-dropdown-icon-view");
+    mask-image: url("../__spritemap#sprite-dropdown-icon-view");
     mask-repeat: no-repeat;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -225,7 +225,7 @@
     width: 12px;
     height: 5px;
     background-color: #ffffff;
-    mask-image: url("/__spritemap#sprite-dropdown-icon-view");
+    mask-image: url("../__spritemap#sprite-dropdown-icon-view");
     background-repeat: no-repeat;
     border-radius: 50%;
     transform: translateY(-50%) rotate(180deg);

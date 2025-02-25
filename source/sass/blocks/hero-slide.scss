@@ -96,7 +96,7 @@
     width: 10px;
     height: 10px;
     background-color: #ffffff;
-    mask-image: url("/__spritemap#sprite-angle-icon-view");
+    mask-image: url("../__spritemap#sprite-angle-icon-view");
     transform: rotate(90deg);
 
     @media (min-width: $tablet-width) {
@@ -147,7 +147,7 @@
     width: 10px;
     height: 10px;
     background-color: #ffffff;
-    mask-image: url("/__spritemap#sprite-angle-icon-view");
+    mask-image: url("../__spritemap#sprite-angle-icon-view");
     transform: rotate(90deg);
 
     @media (min-width: $tablet-width) {
@@ -190,7 +190,7 @@
     width: 10px;
     height: 10px;
     background-color: #ffffff;
-    mask-image: url("/__spritemap#sprite-angle-icon-view");
+    mask-image: url("../__spritemap#sprite-angle-icon-view");
     transform: rotate(90deg);
 
     @media (min-width: $tablet-width) {
@@ -249,7 +249,7 @@
     width: 8px;
     height: 8px;
     background-color: #ffffff;
-    mask-image: url("/__spritemap#sprite-pagination-arrow-icon-view");
+    mask-image: url("../__spritemap#sprite-pagination-arrow-icon-view");
     border-radius: 50%;
     translate: 0 -50%;
     rotate: -45deg;
@@ -358,7 +358,7 @@
     width: 10px;
     height: 10px;
     background-color: #ffffff;
-    mask-image: url("/__spritemap#sprite-angle-icon-view");
+    mask-image: url("../__spritemap#sprite-angle-icon-view");
 
     @media (min-width: $tablet-width) {
       right: -26px;

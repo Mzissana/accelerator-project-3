@@ -77,7 +77,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    mask-image: url("/__spritemap#sprite-plus-icon-view");
+    mask-image: url("../__spritemap#sprite-plus-icon-view");
     mask-size: 18px 18px;
     background-size: 40px 40px;
     mask-repeat: no-repeat;
@@ -208,7 +208,7 @@
   }
 
   &::after {
-    mask-image: url("/__spritemap#sprite-minus-icon-view");
+    mask-image: url("../__spritemap#sprite-minus-icon-view");
     mask-size: 18px 2px;
     mask-position: 11px 19px;
     background-color: $background-accent;
